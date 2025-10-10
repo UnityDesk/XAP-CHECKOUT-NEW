@@ -88,11 +88,14 @@ div#header {
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
 
     &:hover {
       background: #4ECDC4;
       color: #0a1929;
       transform: translateY(-1px);
+      text-decoration: none;
     }
   }
 

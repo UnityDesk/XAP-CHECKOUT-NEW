@@ -13,7 +13,7 @@
 
       <div class="account-section">
         <span class="account-text">Already have an account?</span>
-        <button class="login-button">Login</button>
+        <a href="https://web.xaptv.com/dashboard" class="login-button" target="_blank">Login</a>
       </div>
 
       <client-only>
