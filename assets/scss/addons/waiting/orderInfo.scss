@@ -1,0 +1,14 @@
+div#orderInfo {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  align-items: center;
+  margin: 0 0 37px;
+
+  @media screen and (max-width: 700px) {
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 0 33px;
+    text-align: center;
+  }
+}

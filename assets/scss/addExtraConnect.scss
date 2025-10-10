@@ -1,0 +1,30 @@
+#addExtraConnect {
+  padding: 37px 0 0;
+}
+
+.extra {
+  padding: 42px 0 0;
+  width: 700px;
+  margin: 0 0 41px;
+  display: grid;
+  gap: 20px;
+  grid-auto-rows: 1fr;
+
+  @media screen and (max-width: 1200px) {
+    width: 640px;
+  }
+
+  @media screen and (max-width: 1040px) {
+    width: 525px;
+  }
+
+  @media screen and (max-width: 850px) {
+    width: 100%;
+    margin: 0;
+  }
+
+  @media screen and (max-width: 700px) {
+    padding: 22px 0 0;
+    margin-bottom: 43px;
+  }
+}

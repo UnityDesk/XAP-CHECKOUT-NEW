@@ -1,0 +1,68 @@
+#ccc_resellers {
+  width: 1070px;
+  display: grid;
+  justify-content: space-between;
+  margin: 0 auto;
+  grid-auto-columns: 100%;
+
+  .typeError {
+    padding: 12px;
+    background: #1d737a;
+    color: white;
+    margin: 0 0 26px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  @media screen and (max-width: 1200px) {
+    width: 980px;
+  }
+
+  @media screen and (max-width: 1040px) {
+    width: 800px;
+  }
+
+  @media screen and (max-width: 850px) {
+    width: 650px;
+  }
+
+  @media screen and (max-width: 700px) {
+    width: 100%;
+    padding: 0 3.7%;
+
+    #selectProduct {
+      #products {
+        display: grid;
+        grid-auto-flow: row;
+
+        .product {
+          text-align: center;
+          align-items: center;
+          justify-content: center;
+          order: unset;
+        }
+      }
+    }
+
+    #ccc_existing {
+      .ccc_yesno {
+        margin-bottom: 18px;
+      }
+    }
+  }
+
+  @media (max-width: 375px) {
+    #ccc_existing {
+      .ccc_yesno {
+        grid-auto-flow: row;
+        justify-content: unset;
+        grid-auto-columns: unset;
+
+        button {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,85 @@
+@use '../transition.scss' as transition;
+
+div#total {
+  position: relative;
+  padding: 12px 25px 13px 28px;
+  border-radius: 10px;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  border: 2px solid rgba(78, 205, 196, 0.3);
+  background: rgba(15, 23, 42, 0.6);
+  @include transition.transition;
+
+  p.title {
+    font-size: 20px;
+    font-weight: 900;
+    color: #ffffff;
+    line-height: calc(24 / 20);
+    margin: 0 54px 0 0;
+    text-transform: uppercase;
+    @include transition.transition;
+  }
+
+  p.total {
+    font-size: 20px;
+    font-weight: 900;
+    color: #4ECDC4;
+    line-height: calc(24 / 20);
+    margin: 0 0 0 41px;
+    @include transition.transition;
+    
+    .currency-symbol {
+      margin-left: 4px;
+      color: #4ECDC4;
+    }
+  }
+
+  .currency-info {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 8px;
+    padding: 8px 12px;
+    background: rgba(15, 23, 42, 0.9);
+    border: 1px solid rgba(78, 205, 196, 0.3);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    
+    .conversion-info {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.7);
+      font-style: italic;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    justify-content: space-between;
+    padding: 14px 18px;
+
+    p.total,
+    p.title {
+      font-size: 18px;
+      line-height: calc(22 / 18);
+    }
+  }
+}
+
+.dark-mode {
+  div#total {
+    background: rgba(15, 23, 42, 0.6);
+    border-color: rgba(78, 205, 196, 0.3);
+
+    p.title {
+      color: white;
+    }
+    
+    p.total {
+      color: #4ECDC4;
+    }
+
+    .hr {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+  }
+}

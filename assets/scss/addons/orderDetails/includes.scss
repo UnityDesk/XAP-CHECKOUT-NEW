@@ -1,0 +1,99 @@
+@import '../../transition.scss';
+
+#ccc_resellers {
+  div#includes {
+    margin-top: 0;
+  }
+}
+
+div#includes {
+  margin-top: 62px;
+
+  .title {
+    display: flex;
+    gap: 17px;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 24px;
+    text-align: center;
+    color: white;
+    margin-bottom: 21px;
+
+    span {
+      height: 1px;
+      background-color: #4ECDC4;
+      flex: 1;
+    }
+  }
+
+  ul {
+    padding: 0;
+    list-style: none;
+    display: grid;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 13px;
+    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.13);
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(78, 205, 196, 0.2);
+    padding: 25px 18px;
+    @include transition;
+
+    li {
+      padding: 3px 0 3px 27px;
+      background-color: rgba(255, 255, 255, 0.05);
+      display: flex;
+      gap: 11px;
+      border-radius: 9px;
+      font-size: 17px;
+      line-height: 32px;
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      @include transition;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    ul {
+      li {
+        background-position: 0 6px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1040px) {
+    padding: 27px 9px 31px;
+
+    ul {
+      li {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+.pid {
+  div#includes {
+    margin-top: 40px;
+  }
+}
+
+.dark-mode {
+  div#includes {
+    box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.22);
+
+    h1.includes {
+      color: white;
+    }
+
+    ul {
+      background: rgba(15, 23, 42, 0.6);
+      border-color: rgba(78, 205, 196, 0.2);
+      
+      li {
+        color: white;
+      }
+    }
+  }
+}

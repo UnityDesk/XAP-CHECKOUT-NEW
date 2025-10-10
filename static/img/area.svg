@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ic_account_box</title>
+    <defs>
+        <path d="M0.675,4.125 L0.675,28.275 C0.675,30.1725 2.21025,31.725 4.125,31.725 L28.275,31.725 C30.1725,31.725 31.725,30.1725 31.725,28.275 L31.725,4.125 C31.725,2.2275 30.1725,0.675 28.275,0.675 L4.125,0.675 C2.21025,0.675 0.675,2.2275 0.675,4.125 L0.675,4.125 Z M21.375,11.025 C21.375,13.8885 19.0635,16.2 16.2,16.2 C13.3365,16.2 11.025,13.8885 11.025,11.025 C11.025,8.1615 13.3365,5.85 16.2,5.85 C19.0635,5.85 21.375,8.1615 21.375,11.025 L21.375,11.025 Z M5.85,24.825 C5.85,21.375 12.75,19.4775 16.2,19.4775 C19.65,19.4775 26.55,21.375 26.55,24.825 L26.55,26.55 L5.85,26.55 L5.85,24.825 L5.85,24.825 Z" id="path-1"></path>
+    </defs>
+    <g id="Checkout" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="03.-Payment-Success" transform="translate(-951.000000, -383.000000)">
+            <g id="Group-20" transform="translate(925.000000, 358.000000)">
+                <g id="Group-4" transform="translate(26.000000, 25.000000)">
+                    <g id="ic_account_box">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Mask" fill="#2789FF" xlink:href="#path-1"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

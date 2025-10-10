@@ -1,0 +1,22 @@
+div#products {
+  display: flex;
+  justify-content: space-between;
+  padding: 52px 0 0;
+  margin: 0 0 37px;
+  min-height: 307px;
+
+  @media screen and (max-width: 850px) {
+    min-height: 200px;
+    padding: 35px 0 0;
+    margin: 0;
+  }
+
+  @media screen and (max-width: 700px) {
+    display: grid;
+    justify-content: unset;
+    padding: 25px 0 0;
+    flex-direction: column;
+    gap: 15px;
+    margin: 0 0 43px;
+  }
+}

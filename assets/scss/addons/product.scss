@@ -1,0 +1,250 @@
+@use '../transition.scss' as transition;
+
+// Products grid layout
+#products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 32px;
+  align-items: stretch;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+.product {
+  background: rgba(15, 23, 42, 0.6);
+  border: 2px solid rgba(78, 205, 196, 0.2);
+  border-radius: 12px;
+  padding: 40px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  opacity: 0.8;
+  height: 300px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+
+  &:hover {
+    border-color: #4ECDC4;
+    transform: scale(1.02);
+    opacity: 1;
+  }
+
+  &.selected {
+    border-color: #4ECDC4;
+    background: rgba(78, 205, 196, 0.1);
+    opacity: 1;
+    transform: scale(1.02);
+  }
+
+  * {
+    cursor: pointer;
+  }
+
+  // Last sold badge
+  .sold {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(78, 205, 196, 0.2);
+    color: #4ECDC4;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    p {
+      margin: 0;
+      font-size: 12px;
+    }
+  }
+
+  // Product details
+  .productDetails {
+    text-align: center;
+    margin-bottom: 16px;
+
+    .name {
+      font-size: 24px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+
+    .price {
+      font-size: 48px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 8px;
+      line-height: 1;
+
+      span {
+        font-size: 24px;
+        color: rgba(255, 255, 255, 0.7);
+      }
+    }
+  }
+
+  .billingcycle {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  .save {
+    background: rgba(78, 205, 196, 0.2);
+    color: #4ECDC4;
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-align: center;
+    margin-bottom: 12px;
+    font-size: 14px;
+    font-weight: 600;
+
+    p {
+      margin: 0;
+      font-size: 14px;
+    }
+  }
+
+  .guarantee {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  // Mobile responsive
+  @media screen and (max-width: 768px) {
+    padding: 20px;
+    
+    .productDetails {
+      .name {
+        font-size: 18px;
+      }
+      
+      .price {
+        font-size: 28px;
+        
+        span {
+          font-size: 16px;
+        }
+      }
+    }
+    
+    .sold {
+      position: static;
+      background: rgba(78, 205, 196, 0.2);
+      color: #4ECDC4;
+      padding: 8px 16px;
+      border-radius: 20px;
+      text-align: center;
+      margin-bottom: 12px;
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+
+      p {
+        margin: 0;
+        font-size: 13px;
+      }
+    }
+    
+    .save {
+      font-size: 13px;
+      padding: 6px 12px;
+    }
+    
+    .guarantee {
+      font-size: 11px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: 16px;
+    
+    .productDetails {
+      .name {
+        font-size: 16px;
+      }
+      
+      .price {
+        font-size: 24px;
+        
+        span {
+          font-size: 14px;
+        }
+      }
+    }
+    
+    .sold {
+      position: static;
+      background: rgba(78, 205, 196, 0.2);
+      color: #4ECDC4;
+      padding: 6px 12px;
+      border-radius: 20px;
+      text-align: center;
+      margin-bottom: 12px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+
+      p {
+        margin: 0;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+// Dark mode adjustments
+.dark-mode {
+  .product {
+    background: rgba(15, 23, 42, 0.6);
+    border-color: rgba(78, 205, 196, 0.2);
+
+    &:hover {
+      border-color: #4ECDC4;
+    }
+
+    &.selected {
+      border-color: #4ECDC4;
+      background: rgba(78, 205, 196, 0.1);
+    }
+
+    .sold {
+      background: rgba(78, 205, 196, 0.2);
+      color: #4ECDC4;
+    }
+
+    .productDetails {
+      .name,
+      .price {
+        color: #ffffff;
+      }
+    }
+
+    .billingcycle {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .save {
+      background: rgba(78, 205, 196, 0.2);
+      color: #4ECDC4;
+    }
+
+    .guarantee {
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+}

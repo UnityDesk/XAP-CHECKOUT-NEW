@@ -1,0 +1,373 @@
+@import '../transition.scss';
+
+div#success {
+  width: 1070px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+
+  .successPage {
+    width: 700px;
+    background: white;
+    border-radius: 13px;
+    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.13);
+    padding: 51px 2.25% 58px;
+    @include transition;
+
+    p.succesTitle {
+      font-size: 26px;
+      font-weight: bold;
+      color: #3d474e;
+      line-height: calc(32 / 26);
+      margin: 0 0 30px;
+      text-transform: uppercase;
+      @include transition;
+    }
+
+    .padd {
+      padding: 0 4.4%;
+    }
+
+    h1.setup {
+      font-size: 36px;
+      font-weight: bold;
+      color: #3d474e;
+      line-height: calc(44 / 36);
+      text-align: center;
+      margin: 0 auto 20px;
+      @include transition;
+    }
+
+    h1.welcome {
+      font-size: 36px;
+      font-weight: bold;
+      color: #252525;
+      line-height: calc(47 / 36);
+      text-align: center;
+      margin: 0 0 25px;
+      @include transition;
+    }
+
+    p.congrat {
+      font-size: 16px;
+      text-align: center;
+      color: #636363;
+      line-height: calc(19 / 16);
+      margin: 0 0 52px;
+      @include transition;
+
+      span {
+        font-weight: bold;
+        color: #1c1b1b;
+        @include transition;
+      }
+    }
+
+    .infos {
+      margin: 0 0 41px;
+    }
+
+    p.noticeM3u8 {
+      font-size: 16px;
+      text-align: center;
+      color: #636363;
+      max-width: 479px;
+      margin: 0 auto 23px;
+      line-height: calc(19 / 16);
+      @include transition;
+    }
+
+    .grouped {
+      width: 100%;
+      margin: 0 0 42px;
+
+      &.noMarg {
+        margin: 0;
+      }
+
+      button.download {
+        margin: 0 0 12px;
+        width: 100%;
+        border: 0;
+        height: 50px;
+        border-radius: 5px;
+        box-shadow: 4px 8px 10px 0 rgba(0, 12, 24, 0.06);
+        background-color: #37d348;
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 1;
+        color: #ffffff;
+
+        img.m3u8Down {
+          margin: 0 0 0 20px;
+        }
+
+        &.blue {
+          background-color: #4687ff;
+        }
+      }
+
+      .info {
+        font-size: 12px;
+        text-align: center;
+        color: #252525;
+        opacity: 0.68;
+        line-height: calc(15 / 12);
+        @include transition;
+      }
+    }
+
+    hr.successHr {
+      width: 263px;
+      opacity: 0.29;
+      margin: 0 auto 31px;
+      height: 0;
+      padding: 0;
+      border: 0;
+      border-top: 1px solid #979797;
+      @include transition;
+    }
+
+    p.recommanded {
+      font-size: 36px;
+      font-weight: bold;
+      color: #252525;
+      margin: 0 auto 48px;
+      line-height: calc(44 / 36);
+      text-align: center;
+      @include transition;
+    }
+
+    .appHeader {
+      display: flex;
+      align-items: center;
+      margin: 0 0 15px;
+
+      label.apps {
+        display: block;
+        font-size: 20px;
+        font-weight: 900;
+        color: #3a474f;
+        line-height: calc(24 / 20);
+        margin: 0 21px 0 0;
+        @include transition;
+      }
+    }
+
+    .appButtons {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 0 38px;
+
+      button.appButton {
+        width: calc(50% - 19px);
+        height: 50px;
+        border-radius: 8px;
+        box-shadow: 4px 8px 10px 0 rgba(0, 12, 25, 0.06);
+        background-color: #2789ff;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px 0 11px;
+        align-items: center;
+
+        img {
+          max-height: 41px;
+          max-width: 51%;
+        }
+
+        p.appName {
+          font-size: 17px;
+          font-weight: bold;
+          color: #ffffff;
+          line-height: calc(21 / 17);
+          margin: 0;
+        }
+      }
+    }
+
+    p.manage {
+      font-size: 16px;
+      text-align: center;
+      color: #636363;
+      line-height: calc(19 / 16);
+      max-width: 445px;
+      margin: 0 auto 28px;
+      @include transition;
+    }
+
+    @media screen and (max-width: 500px) {
+      .appButtons {
+        flex-flow: column;
+
+        button.appButton {
+          width: 100%;
+          margin: 0 0 20px;
+        }
+      }
+    }
+  }
+
+  .utilities {
+    display: grid;
+    flex-direction: column;
+    gap: 25px;
+    height: max-content;
+  }
+
+  @media screen and (max-width: 1200px) {
+    width: 980px;
+
+    .successPage {
+      width: 640px;
+    }
+
+    .utilities {
+      .utilitie {
+        width: 300px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1040px) {
+    width: 800px;
+
+    .successPage {
+      width: 525px;
+    }
+
+    .utilities {
+      .utilitie {
+        width: 250px;
+
+        p.title {
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 850px) {
+    width: 650px;
+    flex-direction: column;
+
+    .successPage {
+      width: 100%;
+      order: 2;
+    }
+
+    .utilities {
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin: 0 0 30px;
+
+      .utilitie {
+        flex: 1 33%;
+        width: unset;
+      }
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    width: 100%;
+    padding: 0 3.7%;
+
+    .utilities {
+      flex-wrap: unset;
+      justify-content: space-between;
+      gap: unset;
+      margin: 0 0 24px;
+      grid-auto-columns: auto auto auto auto;
+      grid-auto-flow: column;
+
+      .utilitie {
+        flex-direction: column;
+        background: transparent;
+        box-shadow: none;
+        padding: 0;
+        align-items: center;
+        flex: 1;
+
+        img {
+          display: none;
+        }
+
+        .info {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 8px;
+
+          img {
+            display: block;
+            padding: 21px 20px;
+            background: white;
+            border-radius: 13px;
+            -webkit-border-radius: 13px;
+            -moz-border-radius: 13px;
+            -ms-border-radius: 13px;
+            -o-border-radius: 13px;
+            height: 75px;
+            width: 75px;
+            @include transition;
+          }
+
+          .title {
+            font-size: 16px;
+            line-height: calc(19 / 16);
+            color: white;
+            text-align: center;
+            font-weight: 400;
+            white-space: unset;
+          }
+        }
+      }
+    }
+
+    .successPage {
+      padding: 29px 7px;
+
+      .padd {
+        padding: 0 8px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 374px) {
+    .utilities {
+      .utilitie {
+        .info {
+          img {
+            padding: 15px;
+            height: 60px;
+            width: 60px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.dark-mode {
+  div#success {
+    .utilities {
+      .utilitie {
+        .info {
+          img {
+            background-color: rgb(3, 14, 46);
+          }
+        }
+      }
+    }
+    .successPage {
+      box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.22);
+      background-color: rgb(3, 14, 46);
+
+      h1.welcome,
+      p.congrat,
+      p.congrat span,
+      p.succesTitle {
+        color: white;
+      }
+    }
+  }
+}

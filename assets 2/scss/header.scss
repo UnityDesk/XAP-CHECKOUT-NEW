@@ -1,0 +1,51 @@
+@import './transition.scss';
+
+div#header {
+  height: 80px;
+  padding: 0 9.9% 0 12.8%;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1000;
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #0a0e12;
+
+  * {
+    z-index: 1;
+  }
+
+  a {
+    height: 37px;
+    display: grid;
+    align-items: center;
+  }
+
+  img.logo_header {
+    height: 30px;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+
+  button.signOut {
+    background-color: transparent;
+    cursor: pointer;
+
+    img {
+      cursor: pointer;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    padding: 0 12px;
+    height: 55px;
+
+    img.logo_header {
+      height: 23px;
+    }
+  }
+}

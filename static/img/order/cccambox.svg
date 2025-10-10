@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 3</title>
+    <g id="Checkout" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01.-Full-Checkout" transform="translate(-251.000000, -1202.000000)">
+            <g id="Group-8" transform="translate(185.000000, 862.000000)">
+                <g id="Group-21" transform="translate(42.000000, 326.000000)">
+                    <g id="Group-31" transform="translate(24.000000, 14.000000)">
+                        <g id="Group-3">
+                            <g id="ic_album" fill="#3C83F6">
+                                <path d="M16,0 C7.168,0 0,7.168 0,16 C0,24.832 7.168,32 16,32 C24.832,32 32,24.832 32,16 C32,7.168 24.832,0 16,0 L16,0 Z" id="Path"></path>
+                            </g>
+                            <g id="Group" transform="translate(9.000000, 9.000000)">
+                                <path d="M8.3320776,-9.9475983e-16 C3.73039821,-9.9475983e-16 2.42721399e-13,3.43154935 2.42721399e-13,7.66458 C2.42721399e-13,11.8976106 3.73039821,15.32916 8.3320776,15.32916" id="Path" stroke="#FFFFFF" stroke-width="2.212056" stroke-linecap="round"></path>
+                                <path d="M6.65043862,4.86022523 C5.96562949,4.42504007 5.410482,4.72959798 5.410482,5.54201247 L5.410482,9.86541033 C5.410482,10.6771362 5.96881486,10.9803585 6.65043862,10.5471976 L9.88500338,8.49168383 C10.5698125,8.05649867 10.5666271,7.34889988 9.88500338,6.91573897 L6.65043862,4.86022523 Z" id="Mask" fill="#FFFFFF"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

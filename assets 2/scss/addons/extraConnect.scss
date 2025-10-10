@@ -1,0 +1,200 @@
+@import '../transition.scss';
+
+div#extraConnect {
+  border-radius: 13px;
+  box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.13);
+  background-color: #ffffff;
+  padding: 19px 10px 20px 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  @include transition;
+
+  &.pid {
+    padding: 12px 15px;
+    gap: 22px;
+
+    .content img {
+      margin-right: 15px;
+    }
+
+    .pricing {
+      grid-template-columns: 1fr;
+      gap: 15px;
+
+      p.price {
+        text-align: center;
+        font-weight: 900;
+        order: 2;
+        @include transition;
+      }
+    }
+  }
+
+  * {
+    cursor: pointer;
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    .info {
+      height: 100%;
+      display: grid;
+      gap: 4px;
+      align-items: center;
+      align-content: center;
+      @include transition;
+    }
+
+    img {
+      margin-right: 22px;
+    }
+
+    p.title {
+      font-size: 17px;
+      font-weight: 900;
+      color: #3d474e;
+      line-height: calc(21 / 17);
+      text-transform: uppercase;
+      @include transition;
+    }
+
+    p.description {
+      font-size: 14px;
+      color: #3d474e;
+      line-height: calc(17 / 14);
+      margin: 0;
+      opacity: 0.75;
+      @include transition;
+    }
+  }
+
+  .pricing {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    gap: 13px;
+
+    p.price {
+      font-size: 18px;
+      font-weight: bold;
+      color: #3d474e;
+      line-height: calc(22 / 18);
+      @include transition;
+    }
+
+    .check {
+      min-width: 93px;
+      border-radius: 100px;
+      background-color: rgba(63, 202, 170, 0.14);
+      padding: 8px 6px;
+      box-sizing: border-box;
+      border: 1px solid #3fcaaa;
+      cursor: pointer;
+      @include transition;
+      display: flex;
+      color: #3fcaaa;
+      font-weight: bold;
+      text-align: center;
+
+      .img-wrapper {
+        width: 22px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      &.enabled {
+        background-color: #3fcaaa;
+        color: white;
+      }
+
+      p {
+        flex: 1;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1040px) {
+    padding: 19px 14px 20px 16px;
+
+    .content {
+      img {
+        margin-right: 14px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    padding: 12px 15px 11px;
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    gap: 22px;
+
+    .content {
+      img {
+        margin-right: 15px;
+      }
+
+      .info {
+        display: grid;
+        flex-direction: column;
+        gap: 5px;
+
+        .title {
+          text-transform: uppercase;
+          margin: 0;
+          font-size: 17px;
+        }
+      }
+    }
+
+    .pricing {
+      grid-template-columns: 1fr;
+      gap: 15px;
+
+      p.price {
+        order: 2;
+        margin: 0;
+        font-size: 18px;
+        font-weight: 900;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.dark-mode {
+  div#extraConnect {
+    box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.22);
+    background-color: rgb(3, 14, 46);
+
+    .content {
+      .info {
+        .title,
+        .description {
+          color: white;
+        }
+      }
+    }
+
+    .pricing {
+      p.price {
+        color: white;
+      }
+
+      .check {
+        background-color: rgba(255, 255, 255, 0.47);
+
+        &.enabled {
+          background-color: #37d348;
+        }
+      }
+    }
+  }
+}

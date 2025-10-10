@@ -1,0 +1,71 @@
+@import './transition.scss';
+
+.wrapper {
+  width: 100%;
+  padding: 0 14px;
+}
+
+div#gatewayEdit {
+  border: 1px solid #8cbafa;
+  background-color: #e4efff;
+  border-radius: 7px;
+  box-shadow: 0 5px 8px 0 rgba(17, 37, 93, 0.05);
+  max-width: 512px;
+  width: 100%;
+  padding: 7px 8px 8px 17px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto 37px;
+  gap: 14px;
+  @include transition;
+
+  > div {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    p {
+      font-size: 18px;
+      font-weight: bold;
+      line-height: calc(22 / 18);
+      color: #000e39;
+    }
+  }
+
+  a {
+    height: 40px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3fcaaa;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    box-sizing: 0 1px 4px rgba(0, 0, 0, 0.15);
+  }
+
+  @media (max-width: 850px) {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+
+    > div {
+      flex-direction: column;
+      gap: 11px;
+
+      img {
+        height: 30px;
+      }
+    }
+  }
+}
+
+.dark-mode {
+  div#gatewayEdit {
+    box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.22);
+    background-color: rgb(3, 14, 46);
+  }
+}

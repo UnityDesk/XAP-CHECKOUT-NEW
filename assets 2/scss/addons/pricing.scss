@@ -1,0 +1,85 @@
+@import '../transition.scss';
+
+.pricingInfo {
+  display: flex;
+  padding: 9px 27px;
+  border-radius: 10px;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #f1f5f8;
+  @include transition;
+
+  &.discount {
+    background-color: #bdf0c2;
+    border: 0;
+    padding: 20px 24px 20px 28px;
+  }
+
+  .data {
+    display: flex;
+    align-items: center;
+
+    img.abord {
+      vertical-align: middle;
+      cursor: pointer;
+      height: auto;
+      position: relative;
+      margin: 0;
+      right: 10px;
+    }
+
+    img {
+      margin: 0 15px 0 0;
+      height: 32px;
+    }
+
+    p {
+      font-size: 18px;
+      font-weight: bold;
+      color: #404040;
+      line-height: calc(22 / 18);
+      min-width: 149px;
+      @include transition;
+    }
+  }
+
+  .price {
+    display: flex;
+    align-items: center;
+
+    p {
+      font-size: 18px;
+      color: #404040;
+      line-height: calc(22 / 18);
+      @include transition;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    padding: 9px 18px 9px 13px;
+
+    .data {
+      img.abord {
+        display: none;
+      }
+    }
+  }
+}
+
+.dark-mode {
+  .pricingInfo {
+    background-color: rgba($color: white, $alpha: 0.17);
+
+    .data {
+      p {
+        color: white;
+      }
+    }
+
+    .price {
+      p {
+        color: white;
+      }
+    }
+  }
+}

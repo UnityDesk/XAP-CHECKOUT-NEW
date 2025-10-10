@@ -1,0 +1,170 @@
+@import '../../transition.scss';
+
+div#selectProduct2 {
+  width: 330px;
+
+  .productsDiv {
+    display: grid;
+    gap: 25px;
+  }
+
+  .selectIptv {
+    text-align: center;
+    padding: 14px 0;
+    width: 100%;
+    border-radius: 11px;
+    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.12);
+    background-image: linear-gradient(to bottom, #37d348, #13cd7d);
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: calc(22 / 18);
+    margin: 0 0 11px;
+  }
+
+  img.chevron {
+    display: block;
+    margin: 16px auto 25px;
+  }
+
+  .productSelect {
+    padding: 12px 15px 12px 18px;
+    background: white;
+    border-radius: 13px;
+    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.13);
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    @include transition;
+
+    * {
+      cursor: pointer;
+    }
+
+    .spacer {
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: 19px;
+      align-items: center;
+    }
+
+    .productInfo {
+      display: grid;
+      gap: 6px;
+
+      p.productEndDate {
+        font-size: 13px;
+        font-weight: bold;
+        color: #404040;
+        line-height: calc(16 / 13);
+        @include transition;
+      }
+
+      p.productName {
+        font-size: 18px;
+        font-weight: bold;
+        color: #404040;
+        line-height: calc(22 / 18);
+        @include transition;
+      }
+
+      p.availableConnection {
+        font-size: 13px;
+        font-weight: bold;
+        color: #404040;
+        line-height: calc(16 / 13);
+        @include transition;
+      }
+    }
+
+    .checkbox {
+      width: 24px;
+      height: 24px;
+      border-radius: 8px;
+      border: solid 2px #d3dce6;
+      background-color: rgba(230, 236, 255, 0);
+      @include transition;
+      position: relative;
+
+      &::before {
+        content: '';
+        border-color: white;
+        @include transition;
+      }
+    }
+
+    &.selected {
+      .checkbox {
+        background-color: #418cf7;
+        border-color: #418cf7;
+
+        &::before {
+          content: '';
+          position: absolute;
+          transform: rotate(45deg);
+          height: 13px;
+          width: 6px;
+          border-bottom: 2px solid white;
+          border-right: 2px solid white;
+          top: 2px;
+          left: 7px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    width: 300px;
+  }
+
+  @media screen and (max-width: 1040px) {
+    width: 250px;
+
+    .selectIptv {
+      font-size: 15px;
+      padding: 17px 0;
+    }
+
+    .productSelect {
+      padding: 10px 11px 10px 9px;
+    }
+  }
+
+  @media screen and (max-width: 850px) {
+    width: 100%;
+
+    img.chevron {
+      margin: 11px auto 16px;
+    }
+
+    .productSelect {
+      padding: 12px 15px 12px 20px;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    .selectIptv {
+      font-size: 18px;
+    }
+  }
+}
+
+.dark-mode {
+  div#selectProduct2 {
+    .productSelect {
+      box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.22);
+      background-color: rgb(3, 14, 46);
+
+      .productInfo {
+        p.productEndDate,
+        p.productName,
+        p.availableConnection {
+          color: white;
+        }
+      }
+    }
+  }
+}

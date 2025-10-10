@@ -1,0 +1,22 @@
+#reseller_success {
+  width: 1070px;
+  display: grid;
+  margin: 0 auto;
+  gap: 90px;
+
+  .ccc_section {
+    display: grid;
+    gap: 37px;
+    width: 800px;
+    margin: 0 auto;
+
+    .ccc_title {
+      text-transform: uppercase;
+      //   font-weight: bold;
+      color: white;
+      font-size: 30px;
+    }
+
+    
+  }
+}

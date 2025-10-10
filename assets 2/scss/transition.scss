@@ -1,0 +1,5 @@
+@mixin transition {
+  transition-property: transform, opacity;
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.5, 1);
+}
