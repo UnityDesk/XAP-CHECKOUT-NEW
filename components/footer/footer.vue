@@ -4,19 +4,19 @@
       <div class="footer-section">
         <h3 class="footer-title">Quick Links</h3>
         <ul class="footer-links">
-          <li><a href="#" class="footer-link">Home</a></li>
-          <li><a href="#" class="footer-link">Plans</a></li>
-          <li><a href="#" class="footer-link">Features</a></li>
-          <li><a href="#" class="footer-link">Support</a></li>
+          <li><a href="https://xaptv.com" class="footer-link" target="_blank">Home</a></li>
+          <li><a href="https://xaptv.com/checkout" class="footer-link" target="_blank">Plans</a></li>
+          <li><a href="https://web.xaptv.com/channels" class="footer-link" target="_blank">Features</a></li>
+          <li><a href="https://web.xaptv.com/contact" class="footer-link" target="_blank">Support</a></li>
         </ul>
       </div>
       
       <div class="footer-section">
         <h3 class="footer-title">Support</h3>
         <ul class="footer-links">
-          <li><a href="#" class="footer-link">Help Center</a></li>
-          <li><a href="#" class="footer-link">Contact Us</a></li>
-          <li><a href="#" class="footer-link">FAQ</a></li>
+          <li><a href="https://iptvkb.com" class="footer-link" target="_blank">Help Center</a></li>
+          <li><a href="https://web.xaptv.com/contact" class="footer-link" target="_blank">Contact Us</a></li>
+          <li><a href="https://xaptv.com" class="footer-link" target="_blank">FAQ</a></li>
           <li><a href="#" class="footer-link">Live Chat</a></li>
         </ul>
       </div>
@@ -24,20 +24,10 @@
       <div class="footer-section">
         <h3 class="footer-title">Legal</h3>
         <ul class="footer-links">
-          <li><a href="#" class="footer-link">Terms of Service</a></li>
-          <li><a href="#" class="footer-link">Privacy Policy</a></li>
-          <li><a href="#" class="footer-link">Refund Policy</a></li>
-          <li><a href="#" class="footer-link">DMCA</a></li>
-        </ul>
-      </div>
-      
-      <div class="footer-section">
-        <h3 class="footer-title">Company</h3>
-        <ul class="footer-links">
-          <li><a href="#" class="footer-link">About Us</a></li>
-          <li><a href="#" class="footer-link">Blog</a></li>
-          <li><a href="#" class="footer-link">News</a></li>
-          <li><a href="#" class="footer-link">Careers</a></li>
+          <li><a href="https://web.xaptv.com/terms-of-service" class="footer-link" target="_blank">Terms of Service</a></li>
+          <li><a href="https://web.xaptv.com/privacy-policy" class="footer-link" target="_blank">Privacy Policy</a></li>
+          <li><a href="https://web.xaptv.com/" class="footer-link" target="_blank">Refund Policy</a></li>
+          <li><a href="https://web.xaptv.com/contact" class="footer-link" target="_blank">DMCA</a></li>
         </ul>
       </div>
     </div>
@@ -73,7 +63,7 @@ export default {
   margin: 0 auto;
   padding: 48px 24px 32px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 32px;
 }
 
