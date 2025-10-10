@@ -49,7 +49,7 @@ export default {
       { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
       { name: 'apple-touch-fullscreen', content: 'yes' },
     ],
-    link: [{ rel: 'icon', type: 'image/png', href: '/xap.png' }],
+    link: [{ rel: 'icon', type: 'image/png', href: '/favicon-new.png' }],
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
@@ -163,7 +163,7 @@ export default {
 
   pwa: {
     icon: {
-      source: '/xap.png',
+      source: '/favicon-new.png',
     },
     meta: {
       title: 'XAPTV Checkout',
