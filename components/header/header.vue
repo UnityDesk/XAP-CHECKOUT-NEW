@@ -1,7 +1,7 @@
 <template>
   <div id="header">
     <NuxtLink :to="localePath('/')" class="logo-link">
-      <img :src="logoUrl" alt="Maxco" class="logo-image" />
+      <img :src="logoUrl" alt="XAPTV" class="logo-image" />
     </NuxtLink>
 
     <div class="header-actions">
@@ -39,7 +39,7 @@ export default {
   },
   data() {
     return {
-      logoUrl: '/checkout/max.png',
+      logoUrl: '/checkout/xap.png',
     }
   },
   computed: {

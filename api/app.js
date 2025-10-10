@@ -762,7 +762,7 @@ const coinbasePayment = (data, callback) => {
       clientid: `${clientid}`,
     },
     redirect_url: 'https://tv.xaptv.com/login',
-    cancel_url: `https://tv.xaptv.com/checkout?pid=${pid}`,
+    cancel_url: `https://web.xaptv.com/checkout?pid=${pid}`,
   }
   Charge.create(chargeData, (error, response) => {
     callback(!error ? response.hosted_url : false)

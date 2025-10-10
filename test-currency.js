@@ -1,7 +1,7 @@
 // Test script for currency conversion API
 const axios = require('axios')
 
-const BASE_URL = 'http://localhost:7777/checkout/api'
+const BASE_URL = 'http://localhost:8888/checkout/api'
 
 async function testCurrencyAPI() {
   console.log('🧪 Testing Currency Conversion API...\n')

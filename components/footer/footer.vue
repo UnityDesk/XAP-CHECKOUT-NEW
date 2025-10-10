@@ -45,7 +45,7 @@
     <div class="footer-bottom">
       <div class="footer-bottom-content">
         <p class="footer-copyright">
-          © 2025 Maxco. All rights reserved.
+          © 2025 XAPTV. All rights reserved.
         </p>
       </div>
     </div>

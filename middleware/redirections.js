@@ -1,15 +1,24 @@
 export default function ({ redirect, req, app }) {
-  // Add wwv subdomain
+  // Handle wildcard domains for xaptv.com
   if (process.server) {
     let host = req.headers.host
     const ssl = req.connection.encrypted ? 'https://' : 'http://'
     const path = req.originalUrl
 
-    host = host.split('.')
-    host.unshift('wwv')
-    host = host.join('.')
+    // Check if domain is xaptv.com (without subdomain)
+    if (host === 'xaptv.com') {
+      return redirect(301, ssl + 'web.xaptv.com' + path)
+    }
 
-    if (!host.includes('wwv') && host == 'xaptv.com')
-      return redirect(301, ssl + host + path)
+    // Check if domain is a subdomain of xaptv.com
+    if (host.endsWith('.xaptv.com')) {
+      // Allow wildcard subdomains - no redirect needed
+      return
+    }
+
+    // For any other domain, redirect to web.xaptv.com
+    if (!host.includes('xaptv.com')) {
+      return redirect(301, ssl + 'web.xaptv.com' + path)
+    }
   }
 }

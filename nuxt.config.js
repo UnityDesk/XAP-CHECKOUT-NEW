@@ -11,7 +11,7 @@ export default {
     gateway: process.env.gateway,
   },
   server: {
-    port: process.env.PORT || 7777, // Changed to 7777
+    port: process.env.PORT || 8888, // Changed to 8888
     host: '0.0.0.0', // par défaut: localhost
     timing: false,
     https: {
@@ -24,7 +24,7 @@ export default {
     middleware: ['autoLogin', 'redirections', 'affiliates'],
   },
   head: {
-    title: 'Maxco - CHECKOUT',
+    title: 'XAPTV - CHECKOUT',
     meta: [
       { charset: 'utf-8' },
       {
@@ -49,7 +49,7 @@ export default {
       { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
       { name: 'apple-touch-fullscreen', content: 'yes' },
     ],
-    link: [{ rel: 'icon', type: 'image/png', href: '/max.png' }],
+    link: [{ rel: 'icon', type: 'image/png', href: '/xap.png' }],
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
@@ -163,14 +163,14 @@ export default {
 
   pwa: {
     icon: {
-      source: '/max.png',
+      source: '/xap.png',
     },
     meta: {
-      title: 'Maxco Checkout',
+      title: 'XAPTV Checkout',
       theme_color: '#405db1',
       ogType: 'product',
-      ogSiteName: 'Maxco - CHECKOUT',
-      ogHost: 'https://wwv.maxco.com/checkout/',
+      ogSiteName: 'XAPTV - CHECKOUT',
+      ogHost: 'https://web.xaptv.com/checkout/',
     },
   },
 

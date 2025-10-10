@@ -85,7 +85,7 @@
       <!-- <Utilitie
         :img="require('@/assets/img/mail.svg')"
         :name="$t('success.utilite.openTicket')"
-        :link="'https://wwv.xaptv.com/contact'"
+        :link="'https://web.xaptv.com/contact'"
       ></Utilitie>
       <Utilitie
         :img="require('@/assets/img/report.svg')"

@@ -1,4 +1,4 @@
-# Maxco TV Checkout
+# XAPTV Checkout
 
 A modern, responsive IPTV checkout system built with Nuxt.js and integrated with WHMCS for seamless subscription management.
 
@@ -68,7 +68,7 @@ fraudCheck=true
 ipapikey=your_ip_api_key
 
 # Server Configuration
-PORT=7777
+PORT=8888
 HOST=0.0.0.0
 NODE_ENV=production
 ```
@@ -101,45 +101,45 @@ The system supports real-time currency conversion using WHMCS exchange rates:
 
 ```bash
 # Complete checkout with pre-filled data
-https://beta.maxcotv.com/checkout/?email=customer@example.com&pid=1&auto_redirect=true&promocode=WELCOME10&extraconnect=true&proxyprotect=true
+https://web.xaptv.com/checkout/?email=customer@example.com&pid=1&auto_redirect=true&promocode=WELCOME10&extraconnect=true&proxyprotect=true
 ```
 
 ### Auto Login
 
 ```bash
 # Pre-fill email for existing customers
-https://beta.maxcotv.com/checkout/?email=customer@example.com
+https://web.xaptv.com/checkout/?email=customer@example.com
 ```
 
 ### Product Selection
 
 ```bash
 # Pre-select specific product
-https://beta.maxcotv.com/checkout/?pid=1
+https://web.xaptv.com/checkout/?pid=1
 ```
 
 ### Promotional Codes
 
 ```bash
 # Apply promotional code
-https://beta.maxcotv.com/checkout/?pid=1&promocode=WELCOME10
+https://web.xaptv.com/checkout/?pid=1&promocode=WELCOME10
 ```
 
 ### Connection Management
 
 ```bash
 # Pre-select extra connections
-https://beta.maxcotv.com/checkout/?extraconnect=true
+https://web.xaptv.com/checkout/?extraconnect=true
 
 # Pre-select proxy protection
-https://beta.maxcotv.com/checkout/?proxyprotect=true
+https://web.xaptv.com/checkout/?proxyprotect=true
 ```
 
 ## 🎨 Customization
 
 ### Branding
 
-- **Logo**: Replace `/static/max.png` with your logo
+- **Logo**: Replace `/static/xap.png` with your logo
 - **Favicon**: Update favicon in `nuxt.config.js`
 - **Colors**: Modify SCSS variables in `assets/scss/`
 - **Fonts**: Update font families in `nuxt.config.js`
@@ -221,13 +221,13 @@ The project includes `ecosystem.config.js` for PM2 deployment:
 ```javascript
 module.exports = {
   apps: [{
-    name: 'maxco-checkout',
+    name: 'xaptv-checkout',
     script: './server/index.js',
     instances: 'max',
     exec_mode: 'cluster',
     env: {
       NODE_ENV: 'production',
-      PORT: 7777,
+      PORT: 8888,
       HOST: '0.0.0.0'
     }
   }]
@@ -274,7 +274,7 @@ This project is proprietary software. All rights reserved.
 
 For support and questions:
 
-- **Email**: support@maxcotv.com
+- **Email**: support@xaptv.com
 - **Documentation**: [Internal Wiki]
 - **Issues**: [GitHub Issues](https://github.com/UnityDesk/MX-CHECKOUT/issues)
 
@@ -297,4 +297,4 @@ For support and questions:
 
 ---
 
-**Maxco TV Checkout** - Professional IPTV subscription management system
+**XAPTV Checkout** - Professional IPTV subscription management system
