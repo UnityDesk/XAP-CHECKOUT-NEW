@@ -1,0 +1,348 @@
+/* XAPTV Design System - CSS Tokens */
+/* Import this file in your new project to maintain design consistency */
+
+:root {
+  /* Color Palette */
+  --xaptv-primary: #4ECDC4;
+  --xaptv-primary-hover: #3bb5ad;
+  --xaptv-primary-light: rgba(78, 205, 196, 0.1);
+  --xaptv-primary-border: rgba(78, 205, 196, 0.2);
+  
+  --xaptv-bg-primary: #0a1929;
+  --xaptv-bg-secondary: #1a2332;
+  --xaptv-bg-tertiary: #0f1729;
+  --xaptv-bg-overlay: rgba(10, 25, 41, 0.7);
+  --xaptv-bg-glass: rgba(10, 25, 41, 0.9);
+  
+  --xaptv-text-primary: #ffffff;
+  --xaptv-text-secondary: rgba(255, 255, 255, 0.7);
+  --xaptv-text-muted: rgba(255, 255, 255, 0.6);
+  
+  --xaptv-accent-blue: rgba(59, 130, 246, 0.15);
+  --xaptv-accent-purple: rgba(139, 92, 246, 0.15);
+  --xaptv-grid: rgba(78, 205, 196, 0.03);
+  
+  /* Typography */
+  --xaptv-font-family: 'Inter', 'Geist Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --xaptv-font-weight-light: 400;
+  --xaptv-font-weight-medium: 500;
+  --xaptv-font-weight-semibold: 600;
+  --xaptv-font-weight-bold: 700;
+  
+  --xaptv-font-size-xs: 12px;
+  --xaptv-font-size-sm: 14px;
+  --xaptv-font-size-md: 16px;
+  --xaptv-font-size-lg: 18px;
+  --xaptv-font-size-xl: 24px;
+  --xaptv-font-size-2xl: 32px;
+  
+  /* Spacing System (8px base) */
+  --xaptv-space-xs: 4px;
+  --xaptv-space-sm: 8px;
+  --xaptv-space-md: 16px;
+  --xaptv-space-lg: 24px;
+  --xaptv-space-xl: 32px;
+  --xaptv-space-2xl: 48px;
+  --xaptv-space-3xl: 64px;
+  
+  /* Border Radius */
+  --xaptv-radius-sm: 4px;
+  --xaptv-radius-md: 6px;
+  --xaptv-radius-lg: 8px;
+  --xaptv-radius-xl: 12px;
+  --xaptv-radius-full: 50%;
+  
+  /* Transitions */
+  --xaptv-transition-fast: 0.2s ease;
+  --xaptv-transition-normal: 0.3s ease;
+  --xaptv-transition-slow: 0.5s ease;
+  --xaptv-transition-cubic: cubic-bezier(0.25, 0.8, 0.5, 1);
+  
+  /* Shadows */
+  --xaptv-shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --xaptv-shadow-md: 0 4px 16px rgba(0, 0, 0, 0.2);
+  --xaptv-shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.4);
+  
+  /* Layout */
+  --xaptv-container-max: 1200px;
+  --xaptv-header-height: 80px;
+  --xaptv-header-height-mobile: 55px;
+  
+  /* Z-Index Scale */
+  --xaptv-z-background: 1;
+  --xaptv-z-content: 10;
+  --xaptv-z-header: 1000;
+  --xaptv-z-modal: 2000;
+}
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--xaptv-font-family);
+  background: linear-gradient(135deg, 
+    var(--xaptv-bg-primary) 0%, 
+    var(--xaptv-bg-secondary) 25%, 
+    var(--xaptv-bg-tertiary) 50%, 
+    var(--xaptv-bg-secondary) 75%, 
+    var(--xaptv-bg-primary) 100%);
+  color: var(--xaptv-text-primary);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Typography Classes */
+.xaptv-text-xs { font-size: var(--xaptv-font-size-xs); }
+.xaptv-text-sm { font-size: var(--xaptv-font-size-sm); }
+.xaptv-text-md { font-size: var(--xaptv-font-size-md); }
+.xaptv-text-lg { font-size: var(--xaptv-font-size-lg); }
+.xaptv-text-xl { font-size: var(--xaptv-font-size-xl); }
+.xaptv-text-2xl { font-size: var(--xaptv-font-size-2xl); }
+
+.xaptv-font-light { font-weight: var(--xaptv-font-weight-light); }
+.xaptv-font-medium { font-weight: var(--xaptv-font-weight-medium); }
+.xaptv-font-semibold { font-weight: var(--xaptv-font-weight-semibold); }
+.xaptv-font-bold { font-weight: var(--xaptv-font-weight-bold); }
+
+.xaptv-text-primary { color: var(--xaptv-text-primary); }
+.xaptv-text-secondary { color: var(--xaptv-text-secondary); }
+.xaptv-text-muted { color: var(--xaptv-text-muted); }
+
+/* Button Components */
+.xaptv-btn-primary {
+  background-color: var(--xaptv-primary);
+  color: var(--xaptv-bg-primary);
+  font-weight: var(--xaptv-font-weight-bold);
+  padding: var(--xaptv-space-md) var(--xaptv-space-lg);
+  border-radius: var(--xaptv-radius-md);
+  border: none;
+  cursor: pointer;
+  transition: var(--xaptv-transition-normal);
+  font-family: var(--xaptv-font-family);
+}
+
+.xaptv-btn-primary:hover {
+  background-color: var(--xaptv-primary-hover);
+  transform: scale(1.02);
+}
+
+.xaptv-btn-primary:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.xaptv-btn-secondary {
+  background: var(--xaptv-primary-light);
+  border: 1px solid var(--xaptv-primary);
+  color: var(--xaptv-primary);
+  padding: var(--xaptv-space-sm) var(--xaptv-space-md);
+  border-radius: var(--xaptv-radius-md);
+  font-weight: var(--xaptv-font-weight-semibold);
+  cursor: pointer;
+  transition: var(--xaptv-transition-normal);
+  font-family: var(--xaptv-font-family);
+}
+
+.xaptv-btn-secondary:hover {
+  background: var(--xaptv-primary);
+  color: var(--xaptv-bg-primary);
+  transform: translateY(-1px);
+}
+
+/* Card Component */
+.xaptv-card {
+  background: var(--xaptv-bg-glass);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--xaptv-primary-border);
+  border-radius: var(--xaptv-radius-xl);
+  padding: var(--xaptv-space-lg);
+  box-shadow: var(--xaptv-shadow-lg);
+}
+
+/* Container */
+.xaptv-container {
+  max-width: var(--xaptv-container-max);
+  margin: 0 auto;
+  padding: 0 var(--xaptv-space-lg);
+}
+
+/* Grid System */
+.xaptv-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--xaptv-space-lg);
+}
+
+.xaptv-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--xaptv-space-xl);
+}
+
+/* Flexbox Utilities */
+.xaptv-flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.xaptv-flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Spacing Utilities */
+.xaptv-p-xs { padding: var(--xaptv-space-xs); }
+.xaptv-p-sm { padding: var(--xaptv-space-sm); }
+.xaptv-p-md { padding: var(--xaptv-space-md); }
+.xaptv-p-lg { padding: var(--xaptv-space-lg); }
+.xaptv-p-xl { padding: var(--xaptv-space-xl); }
+
+.xaptv-m-xs { margin: var(--xaptv-space-xs); }
+.xaptv-m-sm { margin: var(--xaptv-space-sm); }
+.xaptv-m-md { margin: var(--xaptv-space-md); }
+.xaptv-m-lg { margin: var(--xaptv-space-lg); }
+.xaptv-m-xl { margin: var(--xaptv-space-xl); }
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .xaptv-grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--xaptv-space-lg);
+  }
+  
+  .xaptv-container {
+    padding: 0 var(--xaptv-space-md);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .xaptv-grid-2,
+  .xaptv-grid-3 {
+    grid-template-columns: 1fr;
+    gap: var(--xaptv-space-md);
+  }
+  
+  .xaptv-container {
+    padding: 0 var(--xaptv-space-sm);
+  }
+}
+
+/* Animation Keyframes */
+@keyframes xaptv-gradientShift {
+  0% { 
+    background: linear-gradient(135deg, var(--xaptv-bg-primary) 0%, var(--xaptv-bg-secondary) 50%, var(--xaptv-bg-tertiary) 100%); 
+  }
+  50% { 
+    background: linear-gradient(135deg, var(--xaptv-bg-secondary) 0%, var(--xaptv-bg-tertiary) 50%, var(--xaptv-bg-primary) 100%); 
+  }
+  100% { 
+    background: linear-gradient(135deg, var(--xaptv-bg-tertiary) 0%, var(--xaptv-bg-primary) 50%, var(--xaptv-bg-secondary) 100%); 
+  }
+}
+
+@keyframes xaptv-floatOrb {
+  0% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(100px, -50px) scale(1.1); }
+  50% { transform: translate(-50px, -100px) scale(0.9); }
+  75% { transform: translate(-100px, 50px) scale(1.05); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+/* Animated Background */
+.xaptv-animated-bg {
+  animation: xaptv-gradientShift 15s infinite alternate ease-in-out;
+  background-size: 400% 400%;
+}
+
+/* Floating Orbs */
+.xaptv-orb {
+  position: fixed;
+  border-radius: var(--xaptv-radius-full);
+  filter: blur(80px);
+  animation: xaptv-floatOrb 25s infinite ease-in-out;
+  z-index: var(--xaptv-z-background);
+  pointer-events: none;
+}
+
+.xaptv-orb-1 {
+  top: 20%;
+  left: 10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, var(--xaptv-primary-light) 0%, transparent 70%);
+}
+
+.xaptv-orb-2 {
+  top: 60%;
+  right: 15%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, var(--xaptv-accent-blue) 0%, transparent 70%);
+  animation-duration: 30s;
+}
+
+.xaptv-orb-3 {
+  bottom: 20%;
+  left: 50%;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, var(--xaptv-accent-purple) 0%, transparent 70%);
+  animation-duration: 20s;
+}
+
+/* Grid Overlay */
+.xaptv-grid-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(var(--xaptv-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--xaptv-grid) 1px, transparent 1px);
+  background-size: 50px 50px;
+  opacity: 0.5;
+  z-index: var(--xaptv-z-background);
+  pointer-events: none;
+}
+
+/* Dark Overlay */
+.xaptv-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--xaptv-bg-overlay);
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .xaptv-animated-bg,
+  .xaptv-orb {
+    animation: none;
+  }
+}
+
+/* Focus States */
+.xaptv-btn-primary:focus,
+.xaptv-btn-secondary:focus {
+  outline: 2px solid var(--xaptv-primary);
+  outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+  .xaptv-orb,
+  .xaptv-grid-overlay,
+  .xaptv-overlay {
+    display: none;
+  }
+}
