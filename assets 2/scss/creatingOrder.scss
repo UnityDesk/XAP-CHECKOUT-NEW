@@ -1,0 +1,66 @@
+@import './transition.scss';
+
+div#creatingOrder {
+  padding: 43px 0;
+  width: 850px;
+  margin: 0 auto;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.2);
+  background: white;
+  border-radius: 13px;
+  gap: 25px;
+  max-width: 90%;
+  @include transition;
+
+  .secure {
+    background: #1d737a;
+    border-radius: 8px;
+    padding: 5px 10px;
+    display: grid;
+    width: max-content;
+    grid-template-columns: auto auto;
+    column-gap: 5px;
+    align-items: center;
+    font-size: 14px;
+    line-height: calc(20 / 14);
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+
+    img {
+      height: 24px;
+    }
+  }
+
+  .creating {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 4px 30px;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    column-gap: 18px;
+    font-size: 17px;
+    line-height: 21px;
+    color: #cccccc;
+    border-radius: 9px;
+    @include transition;
+
+    img {
+      height: 24px;
+    }
+  }
+}
+
+.dark-mode {
+  div#creatingOrder {
+    box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.2);
+    background-color: #0a0e12;
+
+    .creating {
+      background-color: rgba($color: white, $alpha: 0.17);
+      color: white;
+    }
+  }
+}

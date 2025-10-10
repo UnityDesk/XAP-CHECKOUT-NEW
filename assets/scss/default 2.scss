@@ -1,0 +1,49 @@
+@import './transition.scss';
+
+body {
+  background: #172f78 url(~assets/img/background.webp) no-repeat;
+  background-position: top center;
+  min-height: 100vh;
+  height: auto;
+  background-size: 100% 100%;
+}
+
+.dark-mode {
+  body {
+    background: radial-gradient(circle at 0 0, #2f4588, #071236 100%) no-repeat;
+  }
+}
+
+div#UI {
+  padding-top: 5px;
+  padding: 73px 0 61px;
+  box-sizing: border-box;
+  @include transition;
+
+  @media screen and (max-width: 700px) {
+    padding: 53px 0 30px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+
+  &[disabled] {
+    cursor: not-allowed;
+  }
+}
+
+* {
+  outline: none;
+  cursor: default;
+}
+
+input {
+  cursor: text;
+}

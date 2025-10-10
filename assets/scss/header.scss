@@ -1,0 +1,124 @@
+@use './transition.scss' as transition;
+
+div#header {
+  height: 80px;
+  padding: 0 9.9% 0 12.8%;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1000;
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(10, 25, 41, 0.9);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(78, 205, 196, 0.2);
+
+  * {
+    z-index: 1;
+  }
+
+  a.logo-link {
+    height: 37px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .logo-image {
+    height: 40px;
+    width: auto;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  button.signOut {
+    background-color: transparent;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: rgba(78, 205, 196, 0.1);
+    }
+
+    img {
+      cursor: pointer;
+      filter: brightness(0) invert(1);
+    }
+  }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .currency-section {
+    display: flex;
+    align-items: center;
+  }
+
+  .account-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .account-text {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 500;
+  }
+
+  .login-button {
+    background: rgba(78, 205, 196, 0.1);
+    border: 1px solid #4ECDC4;
+    color: #4ECDC4;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: #4ECDC4;
+      color: #0a1929;
+      transform: translateY(-1px);
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    padding: 0 12px;
+    height: 55px;
+
+    .logo-image {
+      height: 30px;
+    }
+
+    .header-actions {
+      gap: 16px;
+    }
+
+    .account-section {
+      gap: 8px;
+    }
+
+    .account-text {
+      font-size: 12px;
+    }
+
+    .login-button {
+      padding: 6px 12px;
+      font-size: 12px;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@import '../../transition.scss';
+
+.orderInfo {
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto auto;
+  gap: 3px;
+  animation: visibled 0.3s alternate;
+  -webkit-animation: visibled 0.3s alternate;
+  width: max-content;
+  margin: 0 auto;
+
+  p {
+    font-size: 13px;
+    font-weight: bold;
+    color: #ffffff;
+    line-height: calc(16 / 13);
+    @include transition;
+
+    &.info {
+      font-weight: 400;
+    }
+  }
+}
+
+.dark-mode {
+  .orderInfo {
+    p {
+      color: white;
+    }
+  }
+}

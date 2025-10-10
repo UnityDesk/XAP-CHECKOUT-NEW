@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ic_open_in_new</title>
+    <defs>
+        <path d="M19.2,19.2 L2.4,19.2 L2.4,2.4 L10.8,2.4 L10.8,0 L2.4,0 C1.068,0 0,1.08 0,2.4 L0,19.2 C0,20.52 1.068,21.6 2.4,21.6 L19.2,21.6 C20.52,21.6 21.6,20.52 21.6,19.2 L21.6,10.8 L19.2,10.8 L19.2,19.2 L19.2,19.2 Z M13.2,0 L13.2,2.4 L17.508,2.4 L5.712,14.196 L7.404,15.888 L19.2,4.092 L19.2,8.4 L21.6,8.4 L21.6,0 L13.2,0 L13.2,0 Z" id="path-1"></path>
+    </defs>
+    <g id="Checkout" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="03.-Payment-Success" transform="translate(-1204.000000, -177.000000)">
+            <g id="Group-18" transform="translate(925.000000, 147.000000)">
+                <g id="Group-17" transform="translate(23.000000, 27.000000)">
+                    <g id="ic_open_in_new" transform="translate(256.000000, 3.000000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Mask" fill="#173181" xlink:href="#path-1"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

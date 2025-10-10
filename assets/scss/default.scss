@@ -1,0 +1,303 @@
+@use './transition.scss' as transition;
+
+// Animated background layers
+@keyframes gradientShift {
+  0% {
+    background: linear-gradient(135deg, #0a1929 0%, #1a2332 50%, #0f1729 100%);
+  }
+  50% {
+    background: linear-gradient(135deg, #1a2332 0%, #0f1729 50%, #0a1929 100%);
+  }
+  100% {
+    background: linear-gradient(135deg, #0f1729 0%, #0a1929 50%, #1a2332 100%);
+  }
+}
+
+@keyframes floatOrb1 {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(100px, -50px) scale(1.1);
+  }
+  50% {
+    transform: translate(-50px, -100px) scale(0.9);
+  }
+  75% {
+    transform: translate(-100px, 50px) scale(1.05);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+@keyframes floatOrb2 {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(-80px, 60px) scale(0.95);
+  }
+  50% {
+    transform: translate(120px, -80px) scale(1.1);
+  }
+  75% {
+    transform: translate(50px, 100px) scale(0.9);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+@keyframes floatOrb3 {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(60px, 80px) scale(1.05);
+  }
+  50% {
+    transform: translate(-120px, -60px) scale(0.95);
+  }
+  75% {
+    transform: translate(-80px, 120px) scale(1.1);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+@keyframes floatParticle {
+  0% {
+    transform: translateY(100vh) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.3;
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(-100px) translateX(20px);
+    opacity: 0;
+  }
+}
+
+@keyframes scrollPostersLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes scrollPostersRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+body {
+  background: linear-gradient(135deg, 
+    #0a1929 0%, 
+    #1a2332 25%, 
+    #0f1729 50%, 
+    #1a2332 75%, 
+    #0a1929 100%);
+  animation: gradientShift 15s infinite alternate ease-in-out;
+  min-height: 100vh;
+  height: auto;
+  background-size: 400% 400%;
+  position: relative;
+  overflow-x: hidden;
+}
+
+// Floating orbs
+body::before {
+  content: '';
+  position: fixed;
+  top: 20%;
+  left: 10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(78, 205, 196, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(80px);
+  animation: floatOrb1 25s infinite ease-in-out;
+  z-index: 1;
+
+  @media screen and (max-width: 768px) {
+    width: 300px;
+    height: 300px;
+    top: 10%;
+    left: 5%;
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 200px;
+    height: 200px;
+    top: 5%;
+    left: 2%;
+  }
+}
+
+// Additional floating orb
+body::after {
+  content: '';
+  position: fixed;
+  top: 60%;
+  right: 15%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(80px);
+  animation: floatOrb2 30s infinite ease-in-out;
+  z-index: 1;
+
+  @media screen and (max-width: 768px) {
+    width: 350px;
+    height: 350px;
+    top: 50%;
+    right: 10%;
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 250px;
+    height: 250px;
+    top: 40%;
+    right: 5%;
+  }
+}
+
+// Third floating orb
+body::before {
+  content: '';
+  position: fixed;
+  bottom: 20%;
+  left: 50%;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(80px);
+  animation: floatOrb3 20s infinite ease-in-out;
+  z-index: 1;
+
+  @media screen and (max-width: 768px) {
+    width: 300px;
+    height: 300px;
+    bottom: 10%;
+    left: 40%;
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 200px;
+    height: 200px;
+    bottom: 5%;
+    left: 30%;
+  }
+}
+
+// Grid overlay
+body::before {
+  background-image: 
+    linear-gradient(rgba(78, 205, 196, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(78, 205, 196, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  opacity: 0.5;
+  z-index: 2;
+
+  @media screen and (max-width: 768px) {
+    background-size: 30px 30px;
+    opacity: 0.3;
+  }
+
+  @media screen and (max-width: 480px) {
+    background-size: 20px 20px;
+    opacity: 0.2;
+  }
+}
+
+// Dark overlay
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 25, 41, 0.7);
+  z-index: 3;
+  pointer-events: none;
+
+  @media screen and (max-width: 768px) {
+    background: rgba(10, 25, 41, 0.8);
+  }
+
+  @media screen and (max-width: 480px) {
+    background: rgba(10, 25, 41, 0.85);
+  }
+}
+
+.dark-mode {
+  body {
+    background: linear-gradient(135deg, #0a1929 0%, #1a2332 50%, #0f1729 100%);
+    animation: gradientShift 15s infinite alternate ease-in-out;
+  }
+}
+
+div#UI {
+  padding-top: 5px;
+  padding: 73px 0 61px;
+  box-sizing: border-box;
+  @include transition.transition;
+  position: relative;
+  z-index: 10;
+
+  @media screen and (max-width: 768px) {
+    padding: 60px 0 40px;
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: 50px 0 30px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  background-color: #4ECDC4;
+  color: #0a1929;
+  font-weight: 700;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #3bb5ad;
+    transform: scale(1.02);
+  }
+
+  &[disabled] {
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+}
+
+* {
+  outline: none;
+  cursor: default;
+}
+
+input {
+  cursor: text;
+}

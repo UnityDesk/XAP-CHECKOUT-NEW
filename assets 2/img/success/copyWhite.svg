@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="17px" viewBox="0 0 14 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ic_content_copy</title>
+    <defs>
+        <path d="M11.3333333,0.708333333 L2.83333333,0.708333333 C2.05416667,0.708333333 1.41666667,1.34583333 1.41666667,2.125 L1.41666667,12.0416667 L2.83333333,12.0416667 L2.83333333,2.125 L11.3333333,2.125 L11.3333333,0.708333333 L11.3333333,0.708333333 Z M13.4583333,3.54166667 L5.66666667,3.54166667 C4.8875,3.54166667 4.25,4.17916667 4.25,4.95833333 L4.25,14.875 C4.25,15.6541667 4.8875,16.2916667 5.66666667,16.2916667 L13.4583333,16.2916667 C14.2375,16.2916667 14.875,15.6541667 14.875,14.875 L14.875,4.95833333 C14.875,4.17916667 14.2375,3.54166667 13.4583333,3.54166667 L13.4583333,3.54166667 Z M13.4583333,14.875 L5.66666667,14.875 L5.66666667,4.95833333 L13.4583333,4.95833333 L13.4583333,14.875 L13.4583333,14.875 Z" id="path-1"></path>
+        <rect id="path-3" x="0" y="0" width="35.4166667" height="35.4166667"></rect>
+    </defs>
+    <g id="GolemTV-Landing" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="1">
+        <g id="checkout-success" transform="translate(-977.000000, -438.000000)">
+            <g id="ic_content_copy" transform="translate(976.000000, 438.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Mask"></g>
+                <g id="Colors/Black" mask="url(#mask-2)">
+                    <g transform="translate(-9.208333, -9.208333)">
+                        <mask id="mask-4" fill="white">
+                            <use xlink:href="#path-3"></use>
+                        </mask>
+                        <use id="Black" stroke="none" fill="#fff" fill-rule="evenodd" xlink:href="#path-3"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

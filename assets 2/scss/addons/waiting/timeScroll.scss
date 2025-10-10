@@ -1,0 +1,27 @@
+@import '../../transition.scss';
+
+div#timeScroll {
+  height: 11px;
+  width: 100%;
+  background-color: rgba(46, 66, 112, 0.2);
+  display: flex;
+  @include transition;
+
+  .progress {
+    height: 100%;
+    width: 20%;
+    display: block;
+    background-color: #ff4848;
+    transition: 0.5s width;
+    -webkit-transition: 0.5s width;
+    -moz-transition: 0.5s width;
+    -ms-transition: 0.5s width;
+    -o-transition: 0.5s width;
+  }
+}
+
+.dark-mode {
+  div#timeScroll {
+    background-color: rgba($color: white, $alpha: 0.17);
+  }
+}

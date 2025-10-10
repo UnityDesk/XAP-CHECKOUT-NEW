@@ -1,0 +1,15 @@
+.alert {
+  height: 65vh;
+  width: 75vw;
+  margin: 0 auto;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  border-radius: 13px;
+  box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.13);
+  background-color: #0b1e57;
+  font-size: 30px;
+  color: white;
+  line-height: calc(36/30);
+  padding: 0 20px;
+}

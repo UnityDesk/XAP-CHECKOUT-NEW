@@ -1,0 +1,175 @@
+@import '../../transition.scss';
+
+div#updateExtra {
+  width: 700px;
+  background: white;
+  border-radius: 13px;
+  box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.13);
+  padding: 29px 34px;
+  height: max-content;
+  @include transition;
+
+  p.select {
+    font-size: 18px;
+    font-weight: bold;
+    color: #3d474e;
+    text-transform: uppercase;
+    margin: 0 0 24px;
+    @include transition;
+  }
+
+  span.range-slider {
+    width: 100%;
+    padding: 0;
+    cursor: pointer;
+
+    * {
+      cursor: pointer;
+    }
+
+    .range-slider-rail {
+      height: 8px;
+      background-color: #e6e6e6;
+      border-radius: 100px;
+      -webkit-border-radius: 100px;
+      -moz-border-radius: 100px;
+      -ms-border-radius: 100px;
+      -o-border-radius: 100px;
+      @include transition;
+    }
+
+    .range-slider-fill {
+      background-color: #3c91e6;
+      height: 8px;
+      border-radius: 100px;
+      -webkit-border-radius: 100px;
+      -moz-border-radius: 100px;
+      -ms-border-radius: 100px;
+      -o-border-radius: 100px;
+      transition: 0.3s width;
+      -webkit-transition: 0.3s width;
+      -moz-transition: 0.3s width;
+      -ms-transition: 0.3s width;
+      -o-transition: 0.3s width;
+    }
+
+    .range-slider-knob {
+      box-shadow: 0 2px 4px 0 rgba(140, 140, 140, 0.3),
+        0 -2px 4px 0 rgba(140, 140, 140, 0.2);
+      transition: 0.3s left;
+      -webkit-transition: 0.3s left;
+      -moz-transition: 0.3s left;
+      -ms-transition: 0.3s left;
+      -o-transition: 0.3s left;
+      @include transition;
+    }
+  }
+
+  .value {
+    display: grid;
+    justify-content: space-between;
+    margin: 0 0 39px;
+
+    p {
+      color: #aaa;
+      font-size: 12px;
+      font-weight: bold;
+      grid-row: 1/-1;
+      @include transition;
+    }
+  }
+
+  div#gateway {
+    gap: 14px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 0 30px;
+  }
+
+  div#prodInfo {
+    display: grid;
+    gap: 15px;
+    margin: 0 0 24px;
+  }
+
+  button.upgrade {
+    border-radius: 5px;
+    box-shadow: 4px 8px 10px 0 rgba(0, 12, 24, 0.06);
+    background: #37d348;
+    color: white;
+    width: 100%;
+    height: 55px;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0 0 17px;
+    @include transition;
+
+    &[disabled] {
+      opacity: 0.8;
+    }
+
+    &.loading {
+      opacity: 0.8;
+      background-image: url(~assets/img/icon/loading.svg);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: auto 90%;
+    }
+  }
+
+  p.terms {
+    font-size: 12px;
+    font-weight: 300;
+    color: #4f4f4f;
+    text-align: center;
+    @include transition;
+  }
+
+  @media screen and (max-width: 1200px) {
+    width: 650px;
+  }
+
+  @media screen and (max-width: 1040px) {
+    width: 525px;
+    padding: 21px 20px;
+  }
+
+  @media screen and (max-width: 850px) {
+    order: 1;
+    width: 100%;
+    padding: 30px 30px;
+  }
+
+  @media screen and (max-width: 700px) {
+    padding: 24px 12px;
+
+    div#gateway {
+      grid-template-columns: auto;
+    }
+  }
+}
+
+.dark-mode {
+  div#updateExtra {
+    box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.22);
+    background-color: rgb(3, 14, 46);
+
+    span.range-slider .range-slider-rail {
+      background-color: rgba($color: white, $alpha: 0.17);
+    }
+
+    p.select {
+      color: white;
+    }
+
+    .value {
+      p {
+        color: white;
+      }
+    }
+
+    p.terms {
+      color: white;
+    }
+  }
+}

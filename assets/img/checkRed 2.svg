@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="13px" height="10px" viewBox="0 0 13 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Mask</title>
+    <defs>
+        <path d="M12.842539,1.20533305 L11.8230543,0.16285449 C11.6119283,-0.0530475102 11.2682096,-0.0544700313 11.0553645,0.159734121 L4.66087534,6.59393495 L1.9560017,3.82795729 C1.74487571,3.61205529 1.40115698,3.61063277 1.18831194,3.82479103 L0.160548628,4.85891802 C-0.0522964088,5.07307629 -0.0536987884,5.42173163 0.157472441,5.63767952 L4.26422809,9.83714551 C4.47535408,10.0530475 4.8190728,10.05447 5.03191784,9.84026588 L12.8395081,1.98409455 C13.0523079,1.7698904 13.053665,1.42123506 12.842539,1.20533305 L12.842539,1.20533305 Z" id="path-1"></path>
+    </defs>
+    <g id="Checkout" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01.-Full-Checkout" transform="translate(-945.000000, -1060.000000)">
+            <g id="Group-12" transform="translate(925.000000, 970.000000)">
+                <g id="Group-13" transform="translate(20.000000, 90.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Mask" fill="#00C972" xlink:href="#path-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

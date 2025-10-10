@@ -1,0 +1,156 @@
+@import '../../transition.scss';
+
+div#active {
+  text-align: center;
+  font-size: 14px;
+  color: white;
+  text-decoration: underline;
+}
+
+div#discount {
+  padding: 18px;
+  border-radius: 13px;
+  box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.13);
+  background-color: #ffffff;
+  animation: opacity 0.5s alternate;
+  -webkit-animation: opacity 0.5s alternate;
+  position: relative;
+  @include transition;
+
+  &.valid {
+    .inputDiv {
+      background-color: rgba(217, 255, 211, 0.6);
+
+      input#discountCode {
+        color: #65ca70;
+      }
+    }
+  }
+
+  p.errorMessage {
+    position: absolute;
+    top: 1px;
+    font-size: 12px;
+    line-height: calc(15 / 12);
+    color: #ed5555;
+  }
+
+  .inputDiv {
+    height: 45px;
+    border-radius: 7px;
+    background-color: #f1f5f8;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    @include transition;
+
+    button.apply {
+      background-color: #3fcaaa;
+      border: 0;
+      font-size: 17px;
+      font-weight: bold;
+      color: #ffffff;
+      line-height: calc(21 / 17);
+      text-transform: uppercase;
+      padding: 0 15px;
+      cursor: pointer;
+      min-width: 81px;
+      @include transition;
+
+      &.loading {
+        opacity: 0.8;
+        background-image: url(~assets/img/icon/loading.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: auto 90%;
+      }
+
+      &.valid {
+        background-image: url(~assets/img/discount.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: auto 50%;
+      }
+    }
+
+    input#discountCode {
+      border: 0;
+      background: transparent;
+      outline: none;
+      font-size: 15px;
+      line-height: calc(18 / 15);
+      width: 175px;
+      color: #3d474e;
+      padding: 0 26px;
+      cursor: text;
+      text-transform: uppercase;
+      font-weight: bold;
+      @include transition;
+
+      &::placeholder {
+        color: #9caec2;
+        text-transform: none;
+        font-weight: 400;
+        @include transition;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1040px) {
+    .inputDiv {
+      input#discountCode {
+        width: 128px;
+        padding: 0 14px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 850px) {
+    .inputDiv {
+      input#discountCode {
+        width: 160px;
+        padding: 0 26px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    margin: 0 0 15px;
+
+    .inputDiv {
+      input#discountCode {
+        width: 175px;
+      }
+    }
+  }
+}
+
+.dark-mode {
+  div#discount {
+    box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.22);
+    background-color: rgb(3, 14, 46);
+
+    .inputDiv {
+      background-color: rgba($color: white, $alpha: 0.17);
+
+      input#discountCode {
+        color: white;
+
+        &::placeholder {
+          color: white;
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+}
+
+.pid {
+  div#discount {
+    display: none;
+
+    @media (max-width: 850px) {
+      display: block;
+    }
+  }
+}

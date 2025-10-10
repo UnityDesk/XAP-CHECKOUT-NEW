@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="33px" height="33px" viewBox="0 0 33 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ic_report</title>
+    <defs>
+        <path d="M22.68486,0 L9.39114,0 L0,9.39114 L0,22.68486 L9.39114,32.076 L22.68486,32.076 L32.076,22.68486 L32.076,9.39114 L22.68486,0 L22.68486,0 Z M16.038,25.4826 C14.75496,25.4826 13.7214,24.44904 13.7214,23.166 C13.7214,21.88296 14.75496,20.8494 16.038,20.8494 C17.32104,20.8494 18.3546,21.88296 18.3546,23.166 C18.3546,24.44904 17.32104,25.4826 16.038,25.4826 L16.038,25.4826 Z M17.82,17.82 L14.256,17.82 L14.256,7.128 L17.82,7.128 L17.82,17.82 L17.82,17.82 Z" id="path-1"></path>
+    </defs>
+    <g id="Checkout" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="03.-Payment-Success" transform="translate(-949.000000, -277.000000)">
+            <g id="Group-12" transform="translate(925.000000, 253.000000)">
+                <g id="Group-11" transform="translate(24.000000, 24.000000)">
+                    <g id="ic_report">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Mask" fill="#E47171" xlink:href="#path-1"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
