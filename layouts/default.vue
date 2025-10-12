@@ -1,7 +1,9 @@
 <template>
   <div class="layout-container">
     <!-- Persistent Background Animation -->
-    <BackgroundAnimation />
+    <client-only>
+      <BackgroundAnimation />
+    </client-only>
     
     <div class="content-wrapper">
       <client-only>
@@ -39,6 +41,8 @@ html {
   flex: 1;
   display: flex;
   flex-direction: column;
+  position: relative;
+  z-index: 10;
 }
 
 *,

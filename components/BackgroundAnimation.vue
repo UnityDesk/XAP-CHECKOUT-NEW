@@ -1,27 +1,32 @@
 <template>
   <div class="background-animation">
+    <!-- Debug indicator -->
+    <div class="debug-indicator" v-if="showDebug">
+      Background Animation Active
+    </div>
+    
     <!-- Animated Background Elements -->
     <div class="movie-posters">
       <div class="poster-row row-1">
         <div class="poster" v-for="(movie, index) in movies" :key="'row1-' + index">
-          <img :src="movie.poster" :alt="movie.title" class="poster-image" />
+          <img :src="movie.poster" :alt="movie.title" class="poster-image" @error="handleImageError" />
         </div>
         <div class="poster" v-for="(movie, index) in movies" :key="'row1-dup-' + index">
-          <img :src="movie.poster" :alt="movie.title" class="poster-image" />
+          <img :src="movie.poster" :alt="movie.title" class="poster-image" @error="handleImageError" />
         </div>
         <div class="poster" v-for="(movie, index) in movies" :key="'row1-dup2-' + index">
-          <img :src="movie.poster" :alt="movie.title" class="poster-image" />
+          <img :src="movie.poster" :alt="movie.title" class="poster-image" @error="handleImageError" />
         </div>
       </div>
       <div class="poster-row row-2">
         <div class="poster" v-for="(movie, index) in movies2" :key="'row2-' + index">
-          <img :src="movie.poster" :alt="movie.title" class="poster-image" />
+          <img :src="movie.poster" :alt="movie.title" class="poster-image" @error="handleImageError" />
         </div>
         <div class="poster" v-for="(movie, index) in movies2" :key="'row2-dup-' + index">
-          <img :src="movie.poster" :alt="movie.title" class="poster-image" />
+          <img :src="movie.poster" :alt="movie.title" class="poster-image" @error="handleImageError" />
         </div>
         <div class="poster" v-for="(movie, index) in movies2" :key="'row2-dup2-' + index">
-          <img :src="movie.poster" :alt="movie.title" class="poster-image" />
+          <img :src="movie.poster" :alt="movie.title" class="poster-image" @error="handleImageError" />
         </div>
       </div>
     </div>
@@ -40,6 +45,7 @@ export default {
       // Static base URL for all environments
       baseUrl: '/checkout',
       isMobile: false,
+      showDebug: process.env.NODE_ENV === 'development',
     }
   },
   computed: {
@@ -83,6 +89,10 @@ export default {
   mounted() {
     this.checkMobile()
     this.setupResizeListener()
+    console.log('BackgroundAnimation mounted')
+    console.log('Movies:', this.movies.length)
+    console.log('Movies2:', this.movies2.length)
+    console.log('Particle count:', this.particleCount)
   },
   methods: {
     checkMobile() {
@@ -90,6 +100,15 @@ export default {
     },
     setupResizeListener() {
       window.addEventListener('resize', this.checkMobile)
+    },
+    handleImageError(event) {
+      console.warn('Image failed to load:', event.target.src)
+      // Set a fallback background color
+      event.target.style.backgroundColor = 'rgba(26, 35, 50, 0.8)'
+      event.target.style.display = 'flex'
+      event.target.style.alignItems = 'center'
+      event.target.style.justifyContent = 'center'
+      event.target.innerHTML = '<span style="color: rgba(255,255,255,0.3); font-size: 12px;">Movie</span>'
     }
   },
   beforeDestroy() {
@@ -105,9 +124,22 @@ export default {
   left: 0;
   width: 100%;
   height: 100vh;
-  z-index: 1;
+  z-index: -1;
   pointer-events: none;
   overflow: hidden;
+}
+
+.debug-indicator {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(78, 205, 196, 0.8);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  z-index: 1000;
+  pointer-events: auto;
 }
 
 /* Movie poster animations */
