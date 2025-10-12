@@ -28,12 +28,17 @@ function simulateCloudflareWorker(request, cf) {
     };
   }
 
-  // Reset cookie (testing helper)
-  if (url.searchParams.get('_resetLang') === '1') {
+  // Nuke cookie (testing helper)
+  if (url.searchParams.get('_nukeLang') === '1') {
     return {
-      type: 'reset',
+      type: 'nuke',
       status: 204,
-      cookie: 'browserLang=; Path=/; Secure; HttpOnly; SameSite=Lax; Max-Age=0'
+      cookies: [
+        'browserLang=; Path=/; Secure; HttpOnly; SameSite=Lax; Max-Age=0; Domain=.xaptv.com',
+        'browserLang=; Path=/; Secure; HttpOnly; SameSite=Lax; Max-Age=0',
+        'browserLang=; Path=/checkout; Secure; HttpOnly; SameSite=Lax; Max-Age=0; Domain=.xaptv.com',
+        'browserLang=; Path=/checkout; Secure; HttpOnly; SameSite=Lax; Max-Age=0'
+      ]
     };
   }
 
@@ -266,29 +271,39 @@ const TEST_CASES = [
     }
   },
   {
-    name: 'Reset Cookie Helper',
+    name: 'Nuke Cookie Helper',
     request: {
-      url: 'https://web.xaptv.com/checkout/?_resetLang=1',
+      url: 'https://web.xaptv.com/checkout/?_nukeLang=1',
       headers: new Map([['Cookie', 'browserLang=es-es']])
     },
     cf: { country: 'ES' },
     expected: {
-      type: 'reset',
+      type: 'nuke',
       status: 204,
-      cookie: 'browserLang=; Path=/; Secure; HttpOnly; SameSite=Lax; Max-Age=0'
+      cookies: [
+        'browserLang=; Path=/; Secure; HttpOnly; SameSite=Lax; Max-Age=0; Domain=.xaptv.com',
+        'browserLang=; Path=/; Secure; HttpOnly; SameSite=Lax; Max-Age=0',
+        'browserLang=; Path=/checkout; Secure; HttpOnly; SameSite=Lax; Max-Age=0; Domain=.xaptv.com',
+        'browserLang=; Path=/checkout; Secure; HttpOnly; SameSite=Lax; Max-Age=0'
+      ]
     }
   },
   {
-    name: 'Reset Cookie Helper - Any Path',
+    name: 'Nuke Cookie Helper - Any Path',
     request: {
-      url: 'https://web.xaptv.com/checkout/es-es/?_resetLang=1',
+      url: 'https://web.xaptv.com/checkout/es-es/?_nukeLang=1',
       headers: new Map([['Cookie', 'browserLang=es-es']])
     },
     cf: { country: 'DE' },
     expected: {
-      type: 'reset',
+      type: 'nuke',
       status: 204,
-      cookie: 'browserLang=; Path=/; Secure; HttpOnly; SameSite=Lax; Max-Age=0'
+      cookies: [
+        'browserLang=; Path=/; Secure; HttpOnly; SameSite=Lax; Max-Age=0; Domain=.xaptv.com',
+        'browserLang=; Path=/; Secure; HttpOnly; SameSite=Lax; Max-Age=0',
+        'browserLang=; Path=/checkout; Secure; HttpOnly; SameSite=Lax; Max-Age=0; Domain=.xaptv.com',
+        'browserLang=; Path=/checkout; Secure; HttpOnly; SameSite=Lax; Max-Age=0'
+      ]
     }
   }
 ];

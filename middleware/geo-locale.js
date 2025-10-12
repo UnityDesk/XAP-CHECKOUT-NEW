@@ -1,6 +1,7 @@
 // middleware/geo-locale.js
+// This middleware is now disabled - Cloudflare Worker handles all language routing
 export default function ({ req }) {
-  // Keep as SSR guard to ensure i18n initializes early.
-  // All redirect logic is in server-middleware to avoid client-side loops.
-  if (!req) return;
+  // No-op: Cloudflare Worker is the source of truth for language routing
+  // This file is kept for compatibility but does nothing
+  return;
 }

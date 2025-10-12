@@ -22,7 +22,7 @@ export default {
   },
   router: {
     base: process.env.NODE_ENV === 'production' ? '/checkout/' : '/checkout/',
-    middleware: ['geo-locale', 'autoLogin', 'redirections', 'affiliates'],
+    middleware: ['autoLogin', 'redirections', 'affiliates'],
   },
   head: {
     title: 'XAPTV - CHECKOUT',
@@ -199,6 +199,8 @@ export default {
   i18n: {
     seo: false,
     strategy: 'prefix_except_default',
+    defaultLocale: 'en-en',
+    redirectOn: 'root',
     locales: [
       {
         code: 'en-en',
@@ -207,16 +209,16 @@ export default {
         name: 'English',
       },
       {
-        code: 'es-es',
-        file: 'es-es.js',
-        iso: 'es-es',
-        name: 'Español',
+        code: 'en-us',
+        file: 'en-us.js',
+        iso: 'en-us',
+        name: 'English - US',
       },
       {
-        code: 'pt-pt',
-        file: 'pt-pt.js',
-        iso: 'pt-pt',
-        name: 'Português',
+        code: 'en-gb',
+        file: 'en-gb.js',
+        iso: 'en-gb',
+        name: 'English - UK',
       },
       {
         code: 'de-de',
@@ -225,22 +227,22 @@ export default {
         name: 'Deutsch',
       },
       {
+        code: 'es-es',
+        file: 'es-es.js',
+        iso: 'es-es',
+        name: 'Español',
+      },
+      {
         code: 'nl-nl',
         file: 'nl-nl.js',
         iso: 'nl-nl',
         name: 'Nederlands',
       },
       {
-        code: 'en-gb',
-        file: 'en-gb.js',
-        iso: 'en-gb',
-        name: 'English',
-      },
-      {
-        code: 'en-us',
-        file: 'en-us.js',
-        iso: 'en-us',
-        name: 'English',
+        code: 'pt-pt',
+        file: 'pt-pt.js',
+        iso: 'pt-pt',
+        name: 'Português',
       },
     ],
     fallbackLocale: {
@@ -252,7 +254,6 @@ export default {
       'de-de': ['en-en', 'de-de'],
       'nl-nl': ['en-en', 'nl-nl'],
     },
-    defaultLocale: 'en-en',
     langDir: 'lang/',
     lazy: true,
     detectBrowserLanguage: {
@@ -263,7 +264,7 @@ export default {
   },
 
   // Express server
-  serverMiddleware: ['~/server-middleware/geo-locale.js', '~/api/app.js', '~/api/affiliate.js'],
+  serverMiddleware: ['~/api/app.js', '~/api/affiliate.js'],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {
