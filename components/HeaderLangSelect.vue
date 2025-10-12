@@ -42,8 +42,14 @@ export default {
   },
   computed: {
     options() {
-      return (this.$i18n.locales || []).map(l =>
+      // Filter out duplicate English variants, keep only en-en
+      const allLocales = (this.$i18n.locales || []).map(l =>
         typeof l === 'string' ? { code: l, name: l } : l
+      );
+      
+      // Remove en-us and en-gb from the selector, keep only en-en
+      return allLocales.filter(locale => 
+        locale.code !== 'en-us' && locale.code !== 'en-gb'
       );
     }
   },
@@ -55,12 +61,22 @@ export default {
       }
       
       try {
+        // Set the locale without navigation to preserve animations
         await this.$i18n.setLocale(code);
-        const to = this.localePath(
+        
+        // Only navigate if we're not already on the correct locale path
+        const currentPath = this.$route.path;
+        const targetPath = this.localePath(
           { name: this.$route.name, params: this.$route.params, query: this.$route.query },
           code
         );
-        this.$router.push(to);
+        
+        // Check if we need to navigate (only if path actually changes)
+        if (currentPath !== targetPath) {
+          // Use replace instead of push to avoid adding to history
+          await this.$router.replace(targetPath);
+        }
+        
         this.closeDropdown();
       } catch (error) {
         console.error('Language change failed:', error);
@@ -79,8 +95,8 @@ export default {
     getFlag(locale) {
       const flagMap = {
         'en-en': '🇺🇸',
-        'en-us': '🇺🇸',
-        'en-gb': '🇬🇧',
+        'en-us': '🇺🇸',  // Backend still supports this
+        'en-gb': '🇬🇧',  // Backend still supports this
         'es-es': '🇪🇸',
         'de-de': '🇩🇪',
         'pt-pt': '🇵🇹',
@@ -92,8 +108,8 @@ export default {
     getLanguageName(locale) {
       const nameMap = {
         'en-en': 'English',
-        'en-us': 'English',
-        'en-gb': 'English',
+        'en-us': 'English',  // Backend still supports this
+        'en-gb': 'English',  // Backend still supports this
         'es-es': 'Español',
         'de-de': 'Deutsch',
         'pt-pt': 'Português',
