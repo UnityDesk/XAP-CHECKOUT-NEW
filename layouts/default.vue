@@ -1,33 +1,35 @@
 <template>
   <div class="layout-container">
-    <!-- Animated Background Elements -->
-    <div class="movie-posters">
-      <div class="poster-row row-1">
-        <div class="poster" v-for="(movie, index) in movies" :key="'row1-' + index">
-          <img :src="movie.poster" :alt="movie.title" class="poster-image" />
+    <!-- Persistent Background Animation - Key ensures it doesn't re-render on language change -->
+    <div class="background-animation-persistent" :key="animationKey">
+      <div class="movie-posters">
+        <div class="poster-row row-1">
+          <div class="poster" v-for="(movie, index) in movies" :key="'row1-' + index">
+            <img :src="movie.poster" :alt="movie.title" class="poster-image" />
+          </div>
+          <div class="poster" v-for="(movie, index) in movies" :key="'row1-dup-' + index">
+            <img :src="movie.poster" :alt="movie.title" class="poster-image" />
+          </div>
+          <div class="poster" v-for="(movie, index) in movies" :key="'row1-dup2-' + index">
+            <img :src="movie.poster" :alt="movie.title" class="poster-image" />
+          </div>
         </div>
-        <div class="poster" v-for="(movie, index) in movies" :key="'row1-dup-' + index">
-          <img :src="movie.poster" :alt="movie.title" class="poster-image" />
-        </div>
-        <div class="poster" v-for="(movie, index) in movies" :key="'row1-dup2-' + index">
-          <img :src="movie.poster" :alt="movie.title" class="poster-image" />
+        <div class="poster-row row-2">
+          <div class="poster" v-for="(movie, index) in movies2" :key="'row2-' + index">
+            <img :src="movie.poster" :alt="movie.title" class="poster-image" />
+          </div>
+          <div class="poster" v-for="(movie, index) in movies2" :key="'row2-dup-' + index">
+            <img :src="movie.poster" :alt="movie.title" class="poster-image" />
+          </div>
+          <div class="poster" v-for="(movie, index) in movies2" :key="'row2-dup2-' + index">
+            <img :src="movie.poster" :alt="movie.title" class="poster-image" />
+          </div>
         </div>
       </div>
-      <div class="poster-row row-2">
-        <div class="poster" v-for="(movie, index) in movies2" :key="'row2-' + index">
-          <img :src="movie.poster" :alt="movie.title" class="poster-image" />
-        </div>
-        <div class="poster" v-for="(movie, index) in movies2" :key="'row2-dup-' + index">
-          <img :src="movie.poster" :alt="movie.title" class="poster-image" />
-        </div>
-        <div class="poster" v-for="(movie, index) in movies2" :key="'row2-dup2-' + index">
-          <img :src="movie.poster" :alt="movie.title" class="poster-image" />
-        </div>
-      </div>
-    </div>
 
-    <div class="particles">
-      <div class="particle" v-for="n in particleCount" :key="'particle-' + n"></div>
+      <div class="particles">
+        <div class="particle" v-for="n in particleCount" :key="'particle-' + n"></div>
+      </div>
     </div>
     
     <div class="content-wrapper">
@@ -60,6 +62,17 @@ html {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+.background-animation-persistent {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
 }
 
 .content-wrapper {
@@ -130,6 +143,8 @@ export default {
       // Static base URL for all environments
       baseUrl: '/checkout',
       isMobile: false,
+      // Animation key that persists across language changes
+      animationKey: 'persistent',
     }
   },
   computed: {
@@ -190,6 +205,13 @@ export default {
   },
   beforeDestroy() {
     window.removeEventListener('resize', this.checkMobile)
+  },
+  watch: {
+    // Prevent animation re-rendering on locale change
+    '$i18n.locale'() {
+      // Keep the same animation key to prevent re-rendering
+      this.animationKey = 'persistent'
+    }
   },
 }
 </script>

@@ -61,19 +61,18 @@ export default {
       }
       
       try {
-        // Set the locale without navigation to preserve animations
+        // Set the locale first
         await this.$i18n.setLocale(code);
         
-        // Only navigate if we're not already on the correct locale path
-        const currentPath = this.$route.path;
+        // Get the target path
         const targetPath = this.localePath(
           { name: this.$route.name, params: this.$route.params, query: this.$route.query },
           code
         );
         
-        // Check if we need to navigate (only if path actually changes)
-        if (currentPath !== targetPath) {
-          // Use replace instead of push to avoid adding to history
+        // Only navigate if the path actually needs to change
+        if (this.$route.path !== targetPath) {
+          // Use replace to avoid history pollution and preserve animations
           await this.$router.replace(targetPath);
         }
         
