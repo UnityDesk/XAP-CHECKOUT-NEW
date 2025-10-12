@@ -2,6 +2,7 @@ import fs from 'fs'
 
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
+  ssr: true,
   loading: false,
   publicRuntimeConfig: {
     defaultPid: process.env.defaultPid,
@@ -262,7 +263,7 @@ export default {
   },
 
   // Express server
-  serverMiddleware: ['~/api/app.js', '~/api/affiliate.js'],
+  serverMiddleware: ['~/server-middleware/geo-locale.js', '~/api/app.js', '~/api/affiliate.js'],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {
