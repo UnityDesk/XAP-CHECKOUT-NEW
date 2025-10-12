@@ -13,6 +13,11 @@ A modern, responsive IPTV checkout system built with Nuxt.js and integrated with
 - **Real-time Pricing**: Dynamic pricing with live currency conversion
 - **Fraud Protection**: Built-in fraud detection and prevention
 - **Promotional Codes**: Support for discount codes and promotions
+- **Cloudflare Worker Integration**: Edge computing for improved performance and global distribution
+- **Multi-Language Support**: 7 languages (English, German, Spanish, Dutch, Portuguese)
+- **IP-Based Routing**: Intelligent routing based on user location
+- **TestSprite Testing**: Comprehensive automated testing framework
+- **Professional Design System**: Consistent UI components and design tokens
 
 ## 🚀 Quick Start
 
@@ -181,6 +186,26 @@ GET /checkout/api/order?userid=123&pid=1&currency=EUR&amount=10.99&paymentmethod
 
 ## 🧪 Testing
 
+### TestSprite Automated Testing
+
+The project includes comprehensive automated testing using TestSprite framework:
+
+```bash
+# Run TestSprite tests
+npm run test:testsprite
+
+# Generate test reports
+npm run test:report
+```
+
+**TestSprite Features:**
+- Frontend and backend test automation
+- IP-based routing tests
+- Language routing validation
+- Checkout flow testing
+- Currency conversion testing
+- Cloudflare Worker integration tests
+
 ### Currency Conversion Test
 
 ```bash
@@ -195,6 +220,8 @@ node test-currency.js
 3. **Payment Flow**: Test complete checkout process
 4. **Mobile Responsive**: Test on various screen sizes
 5. **Safari Performance**: Test on iOS Safari
+6. **Language Routing**: Test multi-language support
+7. **IP-Based Routing**: Test geo-location routing
 
 ## 📦 Deployment
 
@@ -213,6 +240,27 @@ bun run build
 # Start with PM2
 pm2 restart ecosystem.config.js
 ```
+
+### Cloudflare Worker Deployment
+
+The project includes Cloudflare Worker integration for edge computing and global distribution:
+
+```bash
+# Deploy to Cloudflare Workers
+wrangler deploy cloudflare-worker-checkout.js
+
+# Update worker configuration
+wrangler secret put API_URL_WHMCS
+wrangler secret put API_IDENTIFIER
+wrangler secret put API_SECRET
+```
+
+**Cloudflare Worker Features:**
+- Edge computing for reduced latency
+- Global distribution
+- Automatic scaling
+- Built-in DDoS protection
+- IP-based routing and geo-location
 
 ### PM2 Configuration
 
@@ -280,7 +328,18 @@ For support and questions:
 
 ## 🔄 Changelog
 
-### v2.0.0 (Current)
+### v1.5.1 (Current)
+- ✅ Cloudflare Worker integration for edge computing
+- ✅ Multi-language support (7 languages)
+- ✅ IP-based routing and geo-location
+- ✅ TestSprite automated testing framework
+- ✅ Professional design system implementation
+- ✅ Enhanced security features
+- ✅ Improved performance optimizations
+- ✅ Background animation fixes
+- ✅ Language selector enhancements
+
+### v1.5.0
 - ✅ Real-time currency conversion
 - ✅ WHMCS 8.x integration
 - ✅ Modern UI redesign
