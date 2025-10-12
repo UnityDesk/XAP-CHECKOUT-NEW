@@ -4,7 +4,7 @@ export default {
     const path = url.pathname;
     const cookieHeader = request.headers.get('Cookie') || '';
 
-    // Parse cookie safely; prefer the LAST occurrence of browserLang
+    // Parse cookie: prefer the last browserLang occurrence if duplicated
     const getCookie = (name) => {
       const parts = (cookieHeader || '').split(/;\s*/).filter(Boolean);
       const hits = parts.filter(p => p.toLowerCase().startsWith(name.toLowerCase() + '='));
@@ -17,23 +17,21 @@ export default {
     const prefixMatch = path.match(/^\/checkout\/([a-z]{2}-[a-z]{2})(\/|$)/i);
     const currentLocaleInPath = prefixMatch ? prefixMatch[1].toLowerCase() : null;
 
-    // Helpers to set/delete cookie across variants
+    // Helpers to set/delete cookie across Domain/Path variants
     const setLangCookies = (val) => ([
       `browserLang=${val}; Path=/; Secure; HttpOnly; SameSite=Lax; Max-Age=31536000; Domain=.xaptv.com`,
       `browserLang=${val}; Path=/; Secure; HttpOnly; SameSite=Lax; Max-Age=31536000`,
       `browserLang=${val}; Path=/checkout; Secure; HttpOnly; SameSite=Lax; Max-Age=31536000; Domain=.xaptv.com`,
       `browserLang=${val}; Path=/checkout; Secure; HttpOnly; SameSite=Lax; Max-Age=31536000`,
     ]);
-
     const deleteLangCookies = () => ([
-      // delete all common variants
-      'browserLang=; Path=/; Secure; HttpOnly; SameSite=Lax; Max-Age=0; Domain=.xaptv.com',
-      'browserLang=; Path=/; Secure; HttpOnly; SameSite=Lax; Max-Age=0',
-      'browserLang=; Path=/checkout; Secure; HttpOnly; SameSite=Lax; Max-Age=0; Domain=.xaptv.com',
-      'browserLang=; Path=/checkout; Secure; HttpOnly; SameSite=Lax; Max-Age=0',
+      `browserLang=; Path=/; Secure; HttpOnly; SameSite=Lax; Max-Age=0; Domain=.xaptv.com`,
+      `browserLang=; Path=/; Secure; HttpOnly; SameSite=Lax; Max-Age=0`,
+      `browserLang=; Path=/checkout; Secure; HttpOnly; SameSite=Lax; Max-Age=0; Domain=.xaptv.com`,
+      `browserLang=; Path=/checkout; Secure; HttpOnly; SameSite=Lax; Max-Age=0`,
     ]);
 
-    // Debug info
+    // Debug JSON
     if (url.searchParams.get('_debug') === '1') {
       return new Response(JSON.stringify({
         path,
@@ -43,19 +41,14 @@ export default {
       }, null, 2), { headers: { 'content-type': 'application/json' }});
     }
 
-    // Nuke cookie for testing
+    // Nuke cookie for testing (deletes all variants)
     if (url.searchParams.get('_nukeLang') === '1') {
-      return new Response(null, {
-        status: 204,
-        headers: {
-          'Cache-Control': 'no-store',
-          // multiple Set-Cookie headers
-          ...deleteLangCookies().reduce((acc, v, i) => (acc['Set-Cookie' + (i?i:'')] = v, acc), {})
-        }
-      });
+      const headers = { 'Cache-Control': 'no-store' };
+      deleteLangCookies().forEach((v, i) => headers[i ? ('Set-Cookie' + i) : 'Set-Cookie'] = v);
+      return new Response(null, { status: 204, headers });
     }
 
-    // Country -> locale map (must match nuxt-i18n)
+    // Country -> locale (must match nuxt-i18n codes)
     const map = {
       ES: 'es-es', PT: 'pt-pt', NL: 'nl-nl', BE: 'nl-nl',
       DE: 'de-de', AT: 'de-de', CH: 'de-de',
@@ -67,7 +60,7 @@ export default {
 
     const isCheckoutRoot = path === '/checkout' || path === '/checkout/';
 
-    // 1) Root: force geo if cookie missing OR mismatched
+    // 1) Root: if cookie missing OR mismatched, force geo and set cookie variants
     if (isCheckoutRoot && cookieLocale !== target) {
       const dest = `/checkout/${target}/${url.search}`;
       const headers = {
@@ -75,12 +68,11 @@ export default {
         'Cache-Control': 'no-store',
         Vary: 'Cookie, CF-IPCountry'
       };
-      // Attach multiple Set-Cookie variants so the origin sees the same thing
-      setLangCookies(target).forEach((v, idx) => headers[idx ? ('Set-Cookie' + idx) : 'Set-Cookie'] = v);
+      setLangCookies(target).forEach((v, i) => headers[i ? ('Set-Cookie' + i) : 'Set-Cookie'] = v);
       return new Response(null, { status: 302, headers });
     }
 
-    // 2) Locale paths: never redirect; if cookie differs, align cookie and pass through
+    // 2) Locale paths: never redirect. Align cookie if needed, then pass through.
     if (currentLocaleInPath && cookieLocale !== currentLocaleInPath) {
       const resp = await fetch(request);
       const headers = new Headers(resp.headers);
