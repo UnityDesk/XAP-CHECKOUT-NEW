@@ -1,0 +1,15 @@
+{
+  "status": "commited",
+  "type": "frontend",
+  "scope": "codebase",
+  "localEndpoint": "http://localhost:443",
+  "executionArgs": {
+    "projectName": "XAP-CHECKOUT-NEW-1",
+    "projectPath": "C:\\Users\\talha\\OneDrive\\Desktop\\XAP-CHECKOUT-NEW-1",
+    "testIds": [],
+    "additionalInstruction": "Test the live application running at https://web.xaptv.com/checkout/ with comprehensive functional testing including payment gateways, user authentication, currency conversion, product selection, and mobile responsiveness. Focus on testing all major features and API endpoints.",
+    "envs": {
+      "API_KEY": "sk-user-hQ2SefJd53L2t2-jhZ4ti1jeT2InfpD-WcEgpRWMwB075d5f2J3TqsZ_-hPuMKBgM_t0P3TygqakXR3pbupbfxFzX3Eq61PWwEQb25MDw2iZsq5KX8aDcHgKsufC6LB_5MQ"
+    }
+  }
+}
