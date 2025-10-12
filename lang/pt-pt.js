@@ -104,6 +104,11 @@ export default {
         noPid: 'Utilize a sua IPTV em múltiplos dispositivos ao mesmo tempo',
       },
     },
+    connectionSelector: {
+      title: 'Número de Conexões',
+      description: 'Escolha quantas conexões simultâneas precisa',
+      connections: 'Conexões',
+    },
     proxyProtection: {
       title: 'Protecção por procuração',
       description: {
