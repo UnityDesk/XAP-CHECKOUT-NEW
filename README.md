@@ -149,6 +149,24 @@ https://web.xaptv.com/checkout/?proxyprotect=true
 - **Colors**: Modify SCSS variables in `assets/scss/`
 - **Fonts**: Update font families in `nuxt.config.js`
 
+### Background Animations
+
+The system features dynamic movie poster animations:
+
+- **Desktop**: 60% opacity for subtle background effect
+- **Tablet**: 90% opacity for enhanced visibility
+- **Mobile**: 80% opacity for optimal mobile viewing
+- **Animation**: 120-second horizontal scrolling with staggered delays
+- **Performance**: Hardware-accelerated with reduced motion support
+- **Responsive**: Automatically adjusts poster sizes and particle count
+
+### Mobile Optimizations
+
+- **Dark Background**: Prevents whitish appearance on mobile devices
+- **Optimized Overlay**: Reduced dark overlay opacity for better poster visibility
+- **Performance**: Reduced particle count and optimized animations for mobile
+- **Z-Index Layering**: Proper stacking order for optimal visibility
+
 ### Styling
 
 The project uses SCSS with a modular structure:
@@ -338,6 +356,11 @@ For support and questions:
 - ✅ Improved performance optimizations
 - ✅ Background animation fixes
 - ✅ Language selector enhancements
+- ✅ Mobile background whitish appearance fix
+- ✅ Movie poster animation restoration
+- ✅ Optimized poster visibility for mobile devices
+- ✅ Z-index layering improvements
+- ✅ Dark overlay optimization for better poster visibility
 
 ### v1.5.0
 - ✅ Real-time currency conversion
