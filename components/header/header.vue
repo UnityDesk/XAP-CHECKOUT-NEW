@@ -5,9 +5,9 @@
     </NuxtLink>
 
     <div class="header-actions">
-      <div class="currency-section">
+      <div class="language-section">
         <client-only>
-          <CurrencySelector @currency-changed="onCurrencyChanged" />
+          <HeaderLangSelect />
         </client-only>
       </div>
 
@@ -31,11 +31,11 @@
 
 <script>
 import { mapState, mapActions } from 'vuex'
-import CurrencySelector from '~/components/currency/currencySelector.vue'
+import HeaderLangSelect from '~/components/HeaderLangSelect.vue'
 
 export default {
   components: {
-    CurrencySelector,
+    HeaderLangSelect,
   },
   data() {
     return {
@@ -73,13 +73,6 @@ export default {
       this.$router.push(this.localePath('/'))
     },
     
-    onCurrencyChanged(currencyData) {
-      // Emit currency change event to parent components
-      this.$emit('currency-changed', currencyData)
-      
-      // Update the current locale's currency
-      this.$i18n.setLocale(this.$i18n.locale)
-    },
   },
 }
 </script>

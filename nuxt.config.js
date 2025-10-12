@@ -21,7 +21,7 @@ export default {
   },
   router: {
     base: process.env.NODE_ENV === 'production' ? '/checkout/' : '/checkout/',
-    middleware: ['autoLogin', 'redirections', 'affiliates'],
+    middleware: ['geo-locale', 'autoLogin', 'redirections', 'affiliates'],
   },
   head: {
     title: 'XAPTV - CHECKOUT',
@@ -197,6 +197,7 @@ export default {
   // i18n Config
   i18n: {
     seo: false,
+    strategy: 'prefix_except_default',
     locales: [
       {
         code: 'en-en',
@@ -208,37 +209,37 @@ export default {
         code: 'es-es',
         file: 'es-es.js',
         iso: 'es-es',
-        name: 'Spanish',
+        name: 'Español',
       },
       {
         code: 'pt-pt',
         file: 'pt-pt.js',
         iso: 'pt-pt',
-        name: 'Portugueuse',
+        name: 'Português',
       },
       {
         code: 'de-de',
         file: 'de-de.js',
         iso: 'de-de',
-        name: 'German',
+        name: 'Deutsch',
       },
       {
         code: 'nl-nl',
         file: 'nl-nl.js',
         iso: 'nl-nl',
-        name: 'Netherlands',
+        name: 'Nederlands',
       },
       {
         code: 'en-gb',
         file: 'en-gb.js',
         iso: 'en-gb',
-        name: 'English - UK',
+        name: 'English',
       },
       {
         code: 'en-us',
         file: 'en-us.js',
         iso: 'en-us',
-        name: 'English - US',
+        name: 'English',
       },
     ],
     fallbackLocale: {
