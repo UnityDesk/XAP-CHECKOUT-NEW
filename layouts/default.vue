@@ -75,7 +75,7 @@ html {
   left: 0;
   width: 100%;
   height: 100vh;
-  z-index: -1;
+  z-index: 1;
   pointer-events: none;
   overflow: hidden;
 }
@@ -87,7 +87,7 @@ html {
   left: 0;
   width: 100%;
   height: 100vh;
-  z-index: 4;
+  z-index: 5;
   pointer-events: none;
   overflow: hidden;
   will-change: transform;
@@ -154,7 +154,7 @@ html {
   left: 0;
   width: 100%;
   height: 100vh;
-  z-index: 2;
+  z-index: 3;
   pointer-events: none;
   will-change: transform;
   transform: translate3d(0, 0, 0);
@@ -265,7 +265,7 @@ html {
   display: flex;
   flex-direction: column;
   position: relative;
-  z-index: 10;
+  z-index: 20;
 }
 
 *,
