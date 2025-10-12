@@ -62,10 +62,10 @@ html {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #0a1929; // Ensure dark background fallback
+  background-color: #0a1929;
   
   @media screen and (max-width: 768px) {
-    background-color: #0a1929; // Stronger dark background for mobile
+    background-color: #0a1929;
   }
 }
 
