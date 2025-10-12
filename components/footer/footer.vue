@@ -7,12 +7,9 @@
           <img src="/checkout/xap.png" alt="XAPTV Logo" class="footer-logo" />
           <div class="logo-text">
             <h2 class="brand-name">XAPTV</h2>
-            <p class="brand-tagline">Premium IPTV Experience</p>
           </div>
         </div>
-        <p class="footer-description">
-          Your gateway to premium entertainment with thousands of channels, movies, and shows from around the world.
-        </p>
+        <p class="brand-tagline">Premium IPTV Experience</p>
         <div class="social-links">
           <a href="#" class="social-link" aria-label="Facebook">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -36,7 +33,6 @@
         <h3 class="footer-title">Quick Links</h3>
         <ul class="footer-links">
           <li><a href="https://xaptv.com" class="footer-link" target="_blank">Home</a></li>
-          <li><a href="https://xaptv.com/checkout" class="footer-link" target="_blank">Plans</a></li>
           <li><a href="https://web.xaptv.com/channels" class="footer-link" target="_blank">Features</a></li>
           <li><a href="https://web.xaptv.com/contact" class="footer-link" target="_blank">Support</a></li>
         </ul>
@@ -48,7 +44,6 @@
           <li><a href="https://iptvkb.com" class="footer-link" target="_blank">Help Center</a></li>
           <li><a href="https://web.xaptv.com/contact" class="footer-link" target="_blank">Contact Us</a></li>
           <li><a href="https://xaptv.com" class="footer-link" target="_blank">FAQ</a></li>
-          <li><a href="#" class="footer-link">Live Chat</a></li>
         </ul>
       </div>
       
@@ -57,7 +52,6 @@
         <ul class="footer-links">
           <li><a href="https://web.xaptv.com/terms-of-service" class="footer-link" target="_blank">Terms of Service</a></li>
           <li><a href="https://web.xaptv.com/privacy-policy" class="footer-link" target="_blank">Privacy Policy</a></li>
-          <li><a href="https://web.xaptv.com/" class="footer-link" target="_blank">Refund Policy</a></li>
           <li><a href="https://web.xaptv.com/contact" class="footer-link" target="_blank">DMCA</a></li>
         </ul>
       </div>
@@ -157,7 +151,7 @@ export default {
 .brand-tagline {
   font-size: 14px;
   color: rgba(255, 255, 255, 0.8);
-  margin: 0;
+  margin: 12px 0 0 0;
   font-weight: 500;
 }
 
