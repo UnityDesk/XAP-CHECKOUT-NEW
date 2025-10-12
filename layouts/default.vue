@@ -122,7 +122,7 @@ html {
   width: 240px;
   height: 320px;
   border-radius: 12px;
-  opacity: 0.25;
+  opacity: 0.6;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
   border: 2px solid rgba(78, 205, 196, 0.3);
   background: linear-gradient(135deg, #1a2332, #0f1729);
@@ -233,7 +233,7 @@ html {
   .poster {
     width: 160px;
     height: 224px;
-    opacity: 0.3;
+    opacity: 0.5;
   }
   
   .particle:nth-child(n+11) {
@@ -245,7 +245,7 @@ html {
   .poster {
     width: 120px;
     height: 180px;
-    opacity: 0.2;
+    opacity: 0.4;
   }
 }
 
