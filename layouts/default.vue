@@ -233,7 +233,7 @@ html {
   .poster {
     width: 160px;
     height: 224px;
-    opacity: 0.7;
+    opacity: 0.9;
   }
   
   .particle:nth-child(n+11) {
@@ -245,7 +245,7 @@ html {
   .poster {
     width: 120px;
     height: 180px;
-    opacity: 0.6;
+    opacity: 0.8;
   }
 }
 

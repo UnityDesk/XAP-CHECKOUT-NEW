@@ -246,7 +246,7 @@ body::before {
   }
 }
 
-// Dark overlay - stronger on mobile to prevent whitish appearance
+// Dark overlay - reduced on mobile to allow poster visibility
 body::after {
   content: '';
   position: fixed;
@@ -259,11 +259,11 @@ body::after {
   pointer-events: none;
 
   @media screen and (max-width: 768px) {
-    background: rgba(10, 25, 41, 0.9);
+    background: rgba(10, 25, 41, 0.6);
   }
 
   @media screen and (max-width: 480px) {
-    background: rgba(10, 25, 41, 0.95);
+    background: rgba(10, 25, 41, 0.5);
   }
 }
 
