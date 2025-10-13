@@ -10,8 +10,8 @@ div#wait {
   padding: 5px 40px;
   width: max-content;
   gap: 11px;
-  background: rgba(15, 23, 42, 0.6);
-  border: 1px solid rgba(78, 205, 196, 0.2);
+  background: linear-gradient(135deg, rgba(26, 35, 50, 0.8) 0%, rgba(15, 23, 41, 0.8) 50%, rgba(26, 35, 50, 0.8) 100%);
+  border: 1px solid rgba(78, 205, 196, 0.4);
   border-radius: 9px;
   margin: 0 auto 24px;
   grid-template-columns: auto auto auto;
@@ -57,8 +57,8 @@ div#wait {
 
 .dark-mode {
   div#wait {
-    background: rgba(15, 23, 42, 0.6);
-    border-color: rgba(78, 205, 196, 0.2);
+    background: linear-gradient(135deg, rgba(26, 35, 50, 0.8) 0%, rgba(15, 23, 41, 0.8) 50%, rgba(26, 35, 50, 0.8) 100%);
+    border-color: rgba(78, 205, 196, 0.4);
 
     p.time,
     p.waiting {

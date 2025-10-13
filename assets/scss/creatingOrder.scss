@@ -8,7 +8,8 @@ div#creatingOrder {
   align-items: center;
   justify-content: center;
   box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.13);
-  background: #0a2e2c;
+  background: linear-gradient(135deg, #1a2332 0%, #0f1729 50%, #1a2332 100%);
+  border: 1px solid rgba(78, 205, 196, 0.3);
   border-radius: 13px;
   gap: 25px;
   max-width: 90%;
@@ -56,7 +57,8 @@ div#creatingOrder {
 .dark-mode {
   div#creatingOrder {
     box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.22);
-    background-color: #0a2e2c;
+    background: linear-gradient(135deg, #1a2332 0%, #0f1729 50%, #1a2332 100%);
+    border: 1px solid rgba(78, 205, 196, 0.3);
 
     .creating {
       background-color: rgba(255, 255, 255, 0.05);
