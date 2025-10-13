@@ -167,6 +167,16 @@ The system features dynamic movie poster animations:
 - **Performance**: Reduced particle count and optimized animations for mobile
 - **Z-Index Layering**: Proper stacking order for optimal visibility
 
+### Waiting Page Design
+
+The waiting page features modern gradient backgrounds:
+
+- **Creating Order Block**: Modern gradient from `#1a2332` to `#0f1729` with teal borders
+- **Timer Block**: Enhanced gradient background with improved border visibility
+- **Visual Hierarchy**: Better contrast and definition for important elements
+- **Consistent Design**: Matches overall design system with teal accent colors
+- **Responsive**: Optimized for both mobile and desktop viewing
+
 ### Styling
 
 The project uses SCSS with a modular structure:
@@ -361,6 +371,8 @@ For support and questions:
 - ✅ Optimized poster visibility for mobile devices
 - ✅ Z-index layering improvements
 - ✅ Dark overlay optimization for better poster visibility
+- ✅ Modern gradient backgrounds for waiting page blocks
+- ✅ Enhanced creating order and timer block styling
 
 ### v1.5.0
 - ✅ Real-time currency conversion
