@@ -2,7 +2,8 @@
 
 div#updateExtra {
   width: 700px;
-  background: #0a2e2c;
+  background: linear-gradient(135deg, #1a2332 0%, #0f1729 50%, #1a2332 100%);
+  border: 1px solid rgba(78, 205, 196, 0.3);
   border-radius: 13px;
   box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.13);
   padding: 29px 34px;
@@ -39,7 +40,7 @@ div#updateExtra {
     }
 
     .range-slider-fill {
-      background-color: #00a99d;
+      background-color: #4ECDC4;
       height: 8px;
       border-radius: 100px;
       -webkit-border-radius: 100px;
@@ -95,7 +96,7 @@ div#updateExtra {
   button.upgrade {
     border-radius: 5px;
     box-shadow: 4px 8px 10px 0 rgba(0, 12, 24, 0.06);
-    background: #00a99d;
+    background: #4ECDC4;
     color: white;
     width: 100%;
     height: 55px;
@@ -152,7 +153,8 @@ div#updateExtra {
 .dark-mode {
   div#updateExtra {
     box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.22);
-    background-color: #0a2e2c;
+    background: linear-gradient(135deg, #1a2332 0%, #0f1729 50%, #1a2332 100%);
+    border: 1px solid rgba(78, 205, 196, 0.3);
 
     span.range-slider .range-slider-rail {
       background-color: rgba($color: white, $alpha: 0.1);

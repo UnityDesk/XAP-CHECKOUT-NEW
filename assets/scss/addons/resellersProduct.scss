@@ -14,7 +14,8 @@
 
     .product {
       border: solid 1px rgba(0, 169, 157, 0.22);
-      background-color: #0a2e2c;
+      background: linear-gradient(135deg, #1a2332 0%, #0f1729 50%, #1a2332 100%);
+      border: 1px solid rgba(78, 205, 196, 0.3);
       border-radius: 6px;
       -webkit-border-radius: 6px;
       -moz-border-radius: 6px;
@@ -39,7 +40,7 @@
         height: 19px;
         padding: 2px 0 2px;
         border-radius: 2.4px;
-        background-color: #00a99d;
+        background-color: #4ECDC4;
         color: white;
         text-align: center;
         font-size: 12px;
@@ -49,14 +50,14 @@
       &.bonus {
         & ~ .bonus {
           .ccc_bonus {
-            background-color: #006e66;
+            background-color: #3bb5ad;
             color: white;
           }
         }
 
         &:last-of-type {
           .ccc_bonus {
-            background-color: #00a99d;
+            background-color: #4ECDC4;
             color: white;
           }
         }
@@ -71,7 +72,7 @@
       }
 
       &.selected {
-        background-color: #00a99d;
+        background-color: #4ECDC4;
 
         p.price {
           color: white;
@@ -86,7 +87,8 @@
     #products {
       .product {
         box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.22);
-        background-color: #0a2e2c;
+        background: linear-gradient(135deg, #1a2332 0%, #0f1729 50%, #1a2332 100%);
+      border: 1px solid rgba(78, 205, 196, 0.3);
         border: 0;
 
         p.price {
@@ -94,7 +96,7 @@
         }
 
         &.selected {
-          background-color: #00a99d;
+          background-color: #4ECDC4;
         }
       }
     }
