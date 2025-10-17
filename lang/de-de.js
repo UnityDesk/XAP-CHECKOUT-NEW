@@ -38,10 +38,18 @@ export default {
     symbole: '€',
   },
   title: {
-    home: 'XAPTV - Der beste TV-Anbieter für Europa',
-    checkout: 'XAPTV - Checkout',
-    payment: 'XAPTV - Zahlung',
-    success: 'XAPTV - Erfolg',
+    home: 'XAPTV IPTV Test 2025 - Kostenloser HD-Streaming | Bester IPTV Service',
+    checkout: 'XAPTV IPTV Test 2025 - Kostenloser HD-Streaming | Bester IPTV Service',
+    payment: 'XAPTV IPTV Zahlung - Sichere Abwicklung | Bester IPTV Service 2025',
+    success: 'XAPTV IPTV Erfolg - Willkommen beim Premium Streaming | Bester IPTV 2025',
+  },
+  seo: {
+    description: 'Testen Sie XAPTV IPTV Service kostenlos! Sofortiger Zugang zu 10.000+ TV-Kanälen, Filmen & Serien in HD. Keine Kreditkarte erforderlich. Bester IPTV Test 2025 mit 24/7 Support.',
+    keywords: 'IPTV Test, IPTV kostenloser Test, bester IPTV 2025, IPTV Service, Streaming TV, HD Kanäle, IPTV Deutschland, IPTV Europa, IPTV Österreich, IPTV Schweiz, IPTV Streaming, Live TV, Premium IPTV, IPTV Abonnement',
+    ogTitle: 'XAPTV IPTV Test 2025 - Kostenloser HD-Streaming | Bester IPTV Service',
+    ogDescription: 'Testen Sie XAPTV IPTV Service kostenlos! Sofortiger Zugang zu 10.000+ TV-Kanälen, Filmen & Serien in HD. Keine Kreditkarte erforderlich.',
+    twitterTitle: 'XAPTV IPTV Test 2025 - Kostenloser HD-Streaming',
+    twitterDescription: 'Testen Sie XAPTV IPTV Service kostenlos! 10.000+ TV-Kanäle, Filme & Serien in HD. Keine Kreditkarte erforderlich.',
   },
   success: {
     welcome: 'Willkommen bei der XAP-TV-Familie 🎉',

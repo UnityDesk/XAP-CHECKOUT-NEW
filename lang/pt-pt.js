@@ -45,10 +45,18 @@ export default {
     symbole: '€',
   },
   title: {
-    home: brunch.withTv + ' - O melhor fornecedor de televisão em Portugal',
-    checkout: brunch.withTv + ' - Checkout',
-    payment: brunch.withTv + ' - Payment',
-    success: brunch.withTv + ' - Success',
+    home: 'XAPTV IPTV Teste 2025 - Streaming HD Grátis | Melhor Serviço IPTV',
+    checkout: 'XAPTV IPTV Teste 2025 - Streaming HD Grátis | Melhor Serviço IPTV',
+    payment: 'XAPTV IPTV Pagamento - Checkout Seguro | Melhor Serviço IPTV 2025',
+    success: 'XAPTV IPTV Sucesso - Bem-vindo ao Streaming Premium | Melhor IPTV 2025',
+  },
+  seo: {
+    description: 'Teste XAPTV IPTV grátis! Acesso instantâneo a 10.000+ canais de TV, filmes e séries em HD. Sem cartão de crédito. Melhor teste IPTV 2025 com suporte 24/7.',
+    keywords: 'IPTV teste, IPTV teste grátis, melhor IPTV 2025, serviço IPTV, streaming TV, canais HD, IPTV Portugal, IPTV Brasil, IPTV Europa, IPTV streaming, TV ao vivo, IPTV premium, assinatura IPTV',
+    ogTitle: 'XAPTV IPTV Teste 2025 - Streaming HD Grátis | Melhor Serviço IPTV',
+    ogDescription: 'Teste XAPTV IPTV grátis! Acesso instantâneo a 10.000+ canais de TV, filmes e séries em HD. Sem cartão de crédito.',
+    twitterTitle: 'XAPTV IPTV Teste 2025 - Streaming HD Grátis',
+    twitterDescription: 'Teste XAPTV IPTV grátis! 10.000+ canais de TV, filmes e séries em HD. Sem cartão de crédito.',
   },
   success: {
     welcome: 'Bem-vindo a ' + brunch.withTv + ' Família 🎉',

@@ -45,10 +45,18 @@ export default {
     symbole: '€',
   },
   title: {
-    home: 'XAPTV - De Beste TV-aanbieder voor Europa',
-    checkout: 'XAPTV - Kassa',
-    payment: 'XAPTV - Betaling',
-    success: 'XAPTV - Succes',
+    home: 'XAPTV IPTV Proef 2025 - Gratis HD Streaming | Beste IPTV Service',
+    checkout: 'XAPTV IPTV Proef 2025 - Gratis HD Streaming | Beste IPTV Service',
+    payment: 'XAPTV IPTV Betaling - Veilige Checkout | Beste IPTV Service 2025',
+    success: 'XAPTV IPTV Succes - Welkom bij Premium Streaming | Beste IPTV 2025',
+  },
+  seo: {
+    description: 'Probeer XAPTV IPTV service gratis! Directe toegang tot 10.000+ TV-kanalen, films & series in HD. Geen creditcard vereist. Beste IPTV proef 2025 met 24/7 support.',
+    keywords: 'IPTV proef, IPTV gratis proef, beste IPTV 2025, IPTV service, streaming TV, HD kanalen, IPTV Nederland, IPTV Europa, IPTV België, IPTV streaming, live TV, premium IPTV, IPTV abonnement',
+    ogTitle: 'XAPTV IPTV Proef 2025 - Gratis HD Streaming | Beste IPTV Service',
+    ogDescription: 'Probeer XAPTV IPTV service gratis! Directe toegang tot 10.000+ TV-kanalen, films & series in HD. Geen creditcard vereist.',
+    twitterTitle: 'XAPTV IPTV Proef 2025 - Gratis HD Streaming',
+    twitterDescription: 'Probeer XAPTV IPTV service gratis! 10.000+ TV-kanalen, films & series in HD. Geen creditcard vereist.',
   },
   success: {
     welcome: 'Welkom bij de XAPTV Family 🎉',

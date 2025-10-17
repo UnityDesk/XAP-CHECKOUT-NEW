@@ -45,10 +45,18 @@ export default {
     symbole: '£',
   },
   title: {
-    home: brunch.withTv + ' - The Best TV Provider for Europe',
-    checkout: brunch.withTv + ' - Checkout',
-    payment: brunch.withTv + ' - Payment',
-    success: brunch.withTv + ' - Success',
+    home: 'XAPTV IPTV Trial 2025 - Free HD Streaming | Best IPTV Service UK',
+    checkout: 'XAPTV IPTV Trial 2025 - Free HD Streaming | Best IPTV Service UK',
+    payment: 'XAPTV IPTV Payment - Secure Checkout | Best IPTV Service UK 2025',
+    success: 'XAPTV IPTV Success - Welcome to Premium Streaming | Best IPTV UK 2025',
+  },
+  seo: {
+    description: 'Try XAPTV IPTV service free! Get instant access to 10,000+ TV channels, movies & series in HD. No credit card required. Best IPTV trial 2025 UK with 24/7 support.',
+    keywords: 'IPTV trial UK, IPTV free trial, best IPTV 2025 UK, IPTV service UK, streaming TV UK, HD channels UK, IPTV Britain, IPTV United Kingdom, IPTV streaming UK, live TV UK, premium IPTV UK, IPTV subscription UK',
+    ogTitle: 'XAPTV IPTV Trial 2025 - Free HD Streaming | Best IPTV Service UK',
+    ogDescription: 'Try XAPTV IPTV service free! Get instant access to 10,000+ TV channels, movies & series in HD. No credit card required. Best IPTV trial 2025 UK.',
+    twitterTitle: 'XAPTV IPTV Trial 2025 - Free HD Streaming UK',
+    twitterDescription: 'Try XAPTV IPTV service free! 10,000+ TV channels, movies & series in HD. No credit card required. Best IPTV UK.',
   },
   success: {
     welcome: 'Welcome to ' + brunch.withTv + ' Family 🎉',

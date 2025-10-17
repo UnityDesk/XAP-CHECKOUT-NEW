@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Main Pages -->
+  <url>
+    <loc>https://web.xaptv.com/checkout/</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web.xaptv.com/checkout/"/>
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://web.xaptv.com/checkout/en-us/"/>
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://web.xaptv.com/checkout/en-gb/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://web.xaptv.com/checkout/de-de/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web.xaptv.com/checkout/es-es/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://web.xaptv.com/checkout/nl-nl/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://web.xaptv.com/checkout/pt-pt/"/>
+  </url>
+
+  <!-- English (Default) -->
+  <url>
+    <loc>https://web.xaptv.com/checkout/</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- English US -->
+  <url>
+    <loc>https://web.xaptv.com/checkout/en-us/</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- English UK -->
+  <url>
+    <loc>https://web.xaptv.com/checkout/en-gb/</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- German -->
+  <url>
+    <loc>https://web.xaptv.com/checkout/de-de/</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Spanish -->
+  <url>
+    <loc>https://web.xaptv.com/checkout/es-es/</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Dutch -->
+  <url>
+    <loc>https://web.xaptv.com/checkout/nl-nl/</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Portuguese -->
+  <url>
+    <loc>https://web.xaptv.com/checkout/pt-pt/</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Success Page -->
+  <url>
+    <loc>https://web.xaptv.com/checkout/success/</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Waiting Page -->
+  <url>
+    <loc>https://web.xaptv.com/checkout/waiting/</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Creating Order Page -->
+  <url>
+    <loc>https://web.xaptv.com/checkout/creatingOrder/</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Upsell Page -->
+  <url>
+    <loc>https://web.xaptv.com/checkout/upsell/</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Resellers Pages -->
+  <url>
+    <loc>https://web.xaptv.com/checkout/resellers/</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>

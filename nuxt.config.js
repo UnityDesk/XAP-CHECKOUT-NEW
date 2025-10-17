@@ -25,7 +25,7 @@ export default {
     middleware: ['autoLogin', 'redirections', 'affiliates'],
   },
   head: {
-    title: 'XAPTV - CHECKOUT',
+    title: 'XAPTV IPTV Trial 2025 - Free HD Streaming | Best IPTV Service',
     meta: [
       { charset: 'utf-8' },
       {
@@ -33,11 +33,135 @@ export default {
         content: 'width=device-width, initial-scale=1, maximum-scale=1',
       },
       { name: 'referrer', content: 'no-referrer' },
-      { hid: 'description', name: 'description', content: '' },
+      { 
+        hid: 'description', 
+        name: 'description', 
+        content: 'Try XAPTV IPTV service free! Get instant access to 10,000+ TV channels, movies & series in HD. No credit card required. Best IPTV trial 2025 with 24/7 support.' 
+      },
+      { 
+        hid: 'keywords', 
+        name: 'keywords', 
+        content: 'IPTV trial, IPTV free trial, best IPTV 2025, IPTV service, streaming TV, HD channels, IPTV Europe, IPTV USA, IPTV UK, IPTV Germany, IPTV Spain, IPTV Netherlands, IPTV Portugal' 
+      },
+      { 
+        hid: 'author', 
+        name: 'author', 
+        content: 'XAPTV' 
+      },
+      { 
+        hid: 'robots', 
+        name: 'robots', 
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' 
+      },
+      { 
+        hid: 'googlebot', 
+        name: 'googlebot', 
+        content: 'index, follow' 
+      },
+      // Open Graph / Facebook
+      { 
+        hid: 'og:type', 
+        property: 'og:type', 
+        content: 'website' 
+      },
+      { 
+        hid: 'og:title', 
+        property: 'og:title', 
+        content: 'XAPTV IPTV Trial 2025 - Free HD Streaming | Best IPTV Service' 
+      },
+      { 
+        hid: 'og:description', 
+        property: 'og:description', 
+        content: 'Try XAPTV IPTV service free! Get instant access to 10,000+ TV channels, movies & series in HD. No credit card required. Best IPTV trial 2025.' 
+      },
+      { 
+        hid: 'og:image', 
+        property: 'og:image', 
+        content: 'https://web.xaptv.com/checkout/xap.png' 
+      },
+      { 
+        hid: 'og:url', 
+        property: 'og:url', 
+        content: 'https://web.xaptv.com/checkout/' 
+      },
+      { 
+        hid: 'og:site_name', 
+        property: 'og:site_name', 
+        content: 'XAPTV' 
+      },
+      // Twitter
+      { 
+        hid: 'twitter:card', 
+        name: 'twitter:card', 
+        content: 'summary_large_image' 
+      },
+      { 
+        hid: 'twitter:title', 
+        name: 'twitter:title', 
+        content: 'XAPTV IPTV Trial 2025 - Free HD Streaming' 
+      },
+      { 
+        hid: 'twitter:description', 
+        name: 'twitter:description', 
+        content: 'Try XAPTV IPTV service free! 10,000+ TV channels, movies & series in HD. No credit card required.' 
+      },
+      { 
+        hid: 'twitter:image', 
+        name: 'twitter:image', 
+        content: 'https://web.xaptv.com/checkout/xap.png' 
+      },
+      // Structured Data (JSON-LD)
+      {
+        hid: 'application/ld+json',
+        type: 'application/ld+json',
+        innerHTML: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "XAPTV",
+          "url": "https://web.xaptv.com/checkout/",
+          "logo": "https://web.xaptv.com/checkout/xap.png",
+          "description": "Premium IPTV service with 10,000+ TV channels, movies and series in HD. Free trial available with 24/7 support.",
+          "sameAs": [
+            "https://web.xaptv.com",
+            "https://xaptv.com"
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "availableLanguage": ["English", "German", "Spanish", "Dutch", "Portuguese"]
+          },
+          "offers": {
+            "@type": "Offer",
+            "name": "IPTV Trial",
+            "description": "Free IPTV trial with instant access to premium content",
+            "price": "0",
+            "priceCurrency": "EUR",
+            "availability": "https://schema.org/InStock",
+            "validFrom": "2025-01-01",
+            "validThrough": "2025-12-31"
+          },
+          "serviceType": "IPTV Streaming Service",
+          "areaServed": ["Europe", "North America", "South America"],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "IPTV Services",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "IPTV Trial",
+                  "description": "Free trial with 10,000+ channels"
+                }
+              }
+            ]
+          }
+        })
+      },
       {
         name: 'theme-color',
         media: '(prefers-color-scheme: light)',
-        content: '#0a393a',
+        content: '#4ECDC4',
       },
       {
         name: 'theme-color',
@@ -50,7 +174,17 @@ export default {
       { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
       { name: 'apple-touch-fullscreen', content: 'yes' },
     ],
-    link: [{ rel: 'icon', type: 'image/png', href: '/favicon-new.png' }],
+    link: [
+      { rel: 'icon', type: 'image/png', href: '/favicon-new.png' },
+      { rel: 'canonical', href: 'https://web.xaptv.com/checkout/' },
+      { rel: 'alternate', hreflang: 'en', href: 'https://web.xaptv.com/checkout/' },
+      { rel: 'alternate', hreflang: 'en-us', href: 'https://web.xaptv.com/checkout/en-us/' },
+      { rel: 'alternate', hreflang: 'en-gb', href: 'https://web.xaptv.com/checkout/en-gb/' },
+      { rel: 'alternate', hreflang: 'de', href: 'https://web.xaptv.com/checkout/de-de/' },
+      { rel: 'alternate', hreflang: 'es', href: 'https://web.xaptv.com/checkout/es-es/' },
+      { rel: 'alternate', hreflang: 'nl', href: 'https://web.xaptv.com/checkout/nl-nl/' },
+      { rel: 'alternate', hreflang: 'pt', href: 'https://web.xaptv.com/checkout/pt-pt/' },
+    ],
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
@@ -197,7 +331,7 @@ export default {
 
   // i18n Config
   i18n: {
-    seo: false,
+    seo: true,
     strategy: 'prefix_except_default',
     defaultLocale: 'en-en',
     redirectOn: 'root',
