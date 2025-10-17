@@ -47,6 +47,27 @@ bun run build
 pm2 start ecosystem.config.js
 ```
 
+## 📊 Analytics Integration
+
+### Microsoft Clarity
+- **Tracking ID**: `trkhebqtly`
+- **Features**: User session recordings, heatmaps, and behavior analytics
+- **Implementation**: Async loading for optimal performance
+- **Coverage**: All pages and language variants
+
+### Google Analytics
+- **Tracking ID**: `G-300LN8M2L7`
+- **Features**: Traffic analysis, conversion tracking, and user journey mapping
+- **Integration**: Both head scripts and Nuxt.js modules
+- **Additional**: Google Ads conversion tracking (`AW-10890364464`)
+
+### SEO Optimization
+- **Multi-Language SEO**: Optimized titles and meta descriptions for 7 languages
+- **2024-2025 Keywords**: IPTV trial keywords targeting different regions
+- **Structured Data**: JSON-LD implementation for better search understanding
+- **Sitemap**: XML sitemap with hreflang attributes for international SEO
+- **Social Media**: Open Graph and Twitter Cards for enhanced sharing
+
 ## 🔧 Configuration
 
 ### Environment Variables
@@ -402,6 +423,12 @@ For support and questions:
 - ✅ Enhanced creating order and timer block styling
 - ✅ Complete design system update across entire codebase
 - ✅ Unified color scheme with modern teal gradients
+- ✅ Comprehensive SEO optimization with 2024-2025 IPTV keywords
+- ✅ Multi-language SEO titles and meta descriptions
+- ✅ Structured data (JSON-LD) implementation
+- ✅ XML sitemap with hreflang attributes
+- ✅ Microsoft Clarity and Google Analytics integration
+- ✅ Updated Microsoft Clarity tracking ID (trkhebqtly)
 
 ### v1.5.0
 - ✅ Real-time currency conversion
