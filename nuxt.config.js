@@ -185,6 +185,33 @@ export default {
       { rel: 'alternate', hreflang: 'nl', href: 'https://web.xaptv.com/checkout/nl-nl/' },
       { rel: 'alternate', hreflang: 'pt', href: 'https://web.xaptv.com/checkout/pt-pt/' },
     ],
+    script: [
+      // Google Analytics (gtag.js)
+      {
+        src: 'https://www.googletagmanager.com/gtag/js?id=G-300LN8M2L7',
+        async: true
+      },
+      {
+        innerHTML: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-300LN8M2L7');
+        `,
+        type: 'text/javascript'
+      },
+      // Microsoft Clarity
+      {
+        innerHTML: `
+          (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+          })(window, document, "clarity", "script", "rwd7tqvc8i");
+        `,
+        type: 'text/javascript'
+      }
+    ],
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
@@ -264,7 +291,7 @@ export default {
     [
       '@nuxtjs/google-analytics',
       {
-        id: 'G-J05CZBM570',
+        id: 'G-300LN8M2L7',
       },
     ],
   ],
@@ -287,11 +314,11 @@ export default {
       '@nuxtjs/google-gtag',
       {
         id: 'AW-10890364464',
-        // additionalAccounts: [
-        //   {
-        //     id: 'AW-437268160',
-        //   },
-        // ],
+        additionalAccounts: [
+          {
+            id: 'G-300LN8M2L7',
+          },
+        ],
       },
     ],
   ],
